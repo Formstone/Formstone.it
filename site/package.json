@@ -1,0 +1,69 @@
+{
+  "name": "SiteTitle",
+  "id": "siteId",
+  "version": "0.0.1",
+  "description": "Site description.",
+  "author": "Fastspot",
+  "repository": {
+    "type": "git",
+    "url": "url"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.1.0",
+    "grunt": "^0.4.5",
+    "grunt-bless": "^0.2.0",
+    "grunt-browser-sync": "^2.1.3",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-concat": "^0.5.1",
+    "grunt-contrib-imagemin": "^0.9.4",
+    "grunt-contrib-jshint": "^0.11.3",
+    "grunt-contrib-less": "^1.0.1",
+    "grunt-contrib-uglify": "^0.10.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-html-validation": "^0.1.18",
+    "grunt-include-replace": "^3.2.0",
+    "grunt-modernizr": "^1.0.1",
+    "grunt-newer": "^1.1.1",
+    "grunt-postcss": "^0.7.1",
+    "grunt-prettify": "^0.4.0",
+    "grunt-stripmq": "0.0.6",
+    "grunt-svgmin": "^2.0.1",
+    "less-plugin-clean-css": "^1.5.1",
+    "load-grunt-tasks": "^3.3.0"
+  },
+  "css": {
+    "css/site.css": "css/src/site.less",
+    "css/site-ie8.css": "css/src/ie/ie8.less",
+    "css/site-ie9.css": "css/src/ie/ie9.less"
+  },
+  "js": {
+    "js/site.js": [
+	  "js/src/lib/utils.js",
+      "components/jquery/dist/jquery.min.js",
+      "components/formstone/dist/js/core.js",
+      "components/formstone/dist/js/mediaquery.js",
+      "js/src/site.js",
+      "js/src/modules/page.js"
+    ],
+    "js/site-ie8.js": [
+      "components/html5shiv/dist/html5shiv.min.js",
+      "components/html5shiv/dist/html5shiv-printshiv.min.js",
+      "js/src/ie/matchMedia.ie8.js"
+    ],
+    "js/site-ie9.js": [
+      "js/src/ie/matchMedia.ie9.js"
+    ]
+  },
+  "js_ignores": [
+    "js/src/ie/*/",
+    "js/src/lib/*/"
+  ],
+  "vars": {
+    "mq_min_ht": "800",
+    "mq_min_xs": "320",
+    "mq_min_sm": "500",
+    "mq_min_md": "740",
+    "mq_min_lg": "980",
+    "mq_min_xl": "1220"
+  }
+}

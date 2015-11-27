@@ -1,0 +1,75 @@
+/* ==================================================================
+	Base Icons
+================================================================== */
+
+	.icon_only {
+
+		.icon_text {
+			.hidden;
+		}
+	}
+
+	.icon_only_before {
+
+		&:before {
+			.icon_sprite();
+
+			content: "";
+			display: inline-block;
+		}
+	}
+
+	.icon_only_after {
+
+		&:after {
+			.icon_sprite();
+
+			content: "";
+			display: inline-block;
+		}
+	}
+
+
+	.icon_left {
+
+		&:before {
+			margin-right: 10px;
+		}
+	}
+
+	.icon_right {
+
+		&:after {
+			margin-left: 10px;
+		}
+	}
+
+	.icon_center {
+		position: relative;
+
+		display: block;
+		line-height: 1;
+		overflow: hidden;
+		text-indent: 100%;
+
+		&:after {
+			.icon_sprite();
+
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+
+			display: block;
+			content: '';
+			margin: auto;
+		}
+	}
+
+
+/* ==================================================================
+   Icons
+================================================================== */
+
+	

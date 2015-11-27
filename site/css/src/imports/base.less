@@ -1,0 +1,388 @@
+/* ==========================================================================
+	Elements
+============================================================================= */
+
+	html,
+	body {
+		background: @true_white;
+	}
+
+	body {
+		min-width: 300px;
+
+		overflow-x: hidden;
+	}
+
+	::selection {
+		background: #eee;
+		text-shadow: none;
+	}
+
+	hr {
+		width: 100%;
+		height: 1px;
+
+		background: #eee;
+		border: none;
+		clear: both;
+		margin: 0;
+		padding: 0;
+
+	}
+
+	iframe {
+		border: none;
+	}
+
+	menu {
+		margin: 0;
+		padding: 0;
+	}
+
+	audio,
+	canvas,
+	img,
+	svg,
+	video {
+		vertical-align: middle;
+	}
+
+	figure {
+		margin: 0;
+	}
+
+
+/* ==========================================================================
+	 Margins
+============================================================================= */
+
+	.margined,
+	.margined_top {
+		margin-top: @margin_sm;
+	}
+
+	.margined,
+	.margined_bottom {
+		margin-bottom: @margin_sm;
+	}
+
+	.margined_md,
+	.margined_md_top {
+		margin-top: @margin_md;
+
+		@media @min_lg {
+			margin-top: @margin_lg;
+		}
+	}
+
+	.margined_md,
+	.margined_md_bottom {
+		margin-bottom: @margin_md;
+
+		@media @min_lg {
+			margin-bottom: @margin_lg;
+		}
+	}
+
+	.margined_lg,
+	.margined_lg_top {
+		margin-top: @margin_md;
+
+		@media @min_lg {
+			margin-top: @margin_xl;
+		}
+	}
+
+	.margined_lg,
+	.margined_lg_bottom {
+		margin-bottom: @margin_md;
+
+		@media @min_lg {
+			margin-bottom: @margin_xl;
+		}
+	}
+
+
+/* ==================================================================
+   Padding
+================================================================== */
+
+	.padded,
+	.padded_top {
+		padding-top: @margin_sm;
+	}
+
+	.padded,
+	.padded_bottom {
+		padding-bottom: @margin_sm;
+	}
+
+	.padded_md,
+	.padded_md_top {
+		padding-top: @margin_md;
+
+		@media @min_lg {
+			padding-top: @margin_lg;
+		}
+	}
+
+	.padded_md,
+	.padded_md_bottom {
+		padding-bottom: @margin_md;
+
+		@media @min_lg {
+			padding-bottom: @margin_lg;
+		}
+	}
+
+	.padded_lg,
+	.padded_lg_top {
+		padding-top: @margin_md;
+
+		@media @min_lg {
+			padding-top: @margin_xl;
+		}
+	}
+
+	.padded_lg,
+	.padded_lg_bottom {
+		padding-bottom: @margin_md;
+
+		@media @min_lg {
+			padding-bottom: @margin_xl;
+		}
+	}
+
+
+/* ==========================================================================
+	Background Colors
+============================================================================= */
+
+
+/* ==========================================================================
+	Border Colors
+============================================================================= */
+
+
+/* ==========================================================================
+	Helpers
+============================================================================= */
+
+	.absolute {
+		position: absolute;
+	}
+
+	.relative {
+		position: relative;
+	}
+
+	.fixed {
+		position: fixed;
+	}
+
+	.static {
+		position: static;
+	}
+
+	.block {
+		display: block;
+	}
+
+	.block_link {
+		.block;
+	}
+
+	.inline {
+		display: inline;
+	}
+
+	.inline_block {
+		display: inline-block;
+	}
+
+	.full_height {
+		height: 100%;
+	}
+
+	.full_width {
+		width: 100%;
+	}
+
+	.full {
+		.full_width;
+		.full_height;
+	}
+
+	.left,
+	.block_left {
+		float: left;
+	}
+
+	.block_left {
+		margin: 0 20px 20px 0;
+	}
+
+	.right,
+	.block_right {
+		float: right;
+	}
+
+	.block_right {
+		margin: 0 0 20px 20px;
+	}
+
+	.clear {
+		clear: both;
+	}
+
+	.clearfix {
+
+		&:after {
+			clear: both;
+			content: ".";
+			display: block;
+			height: 0;
+			line-height: 0;
+			visibility: hidden;
+		}
+	}
+
+	.contain {
+		overflow: hidden;
+	}
+
+	.no_select,
+	.no_select * {
+		user-select: none;
+	}
+
+	.hidden {
+		display: none !important;
+		visibility: hidden;
+	}
+
+	.visually_hidden {
+		width: 1px;
+		height: 1px;
+
+		position: absolute;
+
+		border: 0;
+		clip: rect(0 0 0 0);
+		margin: -1px;
+		overflow: hidden;
+		padding: 0;
+
+		&.focusable:active,
+		&.focusable:focus {
+			width: auto;
+			height: auto;
+
+			position: static;
+
+			clip: auto;
+			margin: 0;
+			overflow: visible;
+		}
+	}
+
+	.invisible {
+		visibility: hidden;
+	}
+
+	.offscreen {
+		width: 1px;
+		height: 1px;
+
+		position: absolute;
+		left: -999px;
+
+		overflow: hidden;
+		z-index: -999;
+	}
+
+	.print {
+		display: none;
+	}
+
+	.video_frame {
+		width: 100%;
+
+		position: relative;
+
+		padding-bottom: 56.25%;
+
+		iframe {
+			width: 100%;
+			height: 100%;
+
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	}
+
+
+/* ==========================================================================
+	Transitions
+============================================================================= */
+
+	.transition_default {
+		transition-duration: @base_transition_duration;
+		transition-timing-function: @base_transition_timing;
+	}
+
+	.transition_default_ease {
+		transition-duration: @base_transition_duration;
+		transition-timing-function: ease;
+	}
+
+
+/* ==========================================================================
+	Images
+============================================================================= */
+
+	.image_1_1 {
+		padding-top: 100%;
+	}
+
+	.image_16_9 {
+		padding-top: (9 / 16) * 100%;
+	}
+
+	.image_3_2 {
+		padding-top: (2 / 3) * 100%;
+	}
+
+	.responsive_image {
+		display: block;
+
+		picture {
+			display: block;
+		}
+
+		img {
+			width: 100%;
+		}
+	}
+
+
+/* ==========================================================================
+	Media Queries
+============================================================================= */
+
+	@media @min_sm {
+
+	}
+
+	@media @min_md {
+
+	}
+
+	@media @min_lg {
+
+	}
+
+	@media @min_xl {
+
+	}

@@ -1,0 +1,300 @@
+/* ==========================================================================
+	Typography
+============================================================================= */
+
+	.heading_1 {
+
+	}
+
+	.heading_2 {
+
+	}
+
+	.heading_3 {
+
+	}
+
+	.heading_4 {
+
+	}
+
+	.heading_5 {
+
+	}
+
+	.heading_6 {
+
+	}
+
+	.body_text() {
+
+	}
+
+	h1, h2, h3, h4, h5, h6 {  }
+
+	p {  }
+
+	a {
+		.transition_link();
+	}
+
+	:link {
+
+	}
+
+	em {
+		font-style: italic;
+	}
+
+	strong {
+		font-weight: bold;
+	}
+
+	h1, h2, h3, h4, h5, h6 {  }
+
+	h1 {  }
+
+	h2 {  }
+
+	h3 {  }
+
+	h4 {  }
+
+	h5 {  }
+
+	h6 {  }
+
+	p {  }
+
+	a {
+		.transition_link();
+
+		text-decoration: none;
+
+		.touch &[href^=tel] {
+			color:inherit;
+		}
+	}
+
+	em {
+		font-style: italic;
+	}
+
+	strong {
+		font-weight: bold;
+	}
+
+	.type() {
+
+		h1 {
+			.heading_1;
+		}
+
+		h2 {
+			.heading_2;
+		}
+
+		h3 {
+			.heading_3;
+		}
+
+		h4 {
+			.heading_4;
+		}
+
+		h5 {
+			.heading_5;
+		}
+
+		h6 {
+			.heading_6;
+		}
+
+		p {
+			.body_text();
+		}
+	}
+
+	/* WYSIWYG Images
+	============================================================================= */
+
+
+
+
+
+	/* Blockquote
+	============================================================================= */
+
+	blockquote {}
+
+	blockquote p {}
+
+
+	/* Lists
+	============================================================================= */
+
+	ol,
+	ul {
+		li {}
+	}
+
+	ol {
+		counter-reset: li;
+
+		> li {
+			display: block;
+			list-style: none;
+
+			&:before {
+				position: absolute;
+				top: 0;
+				right: 100%;
+
+				content: counter(li) ". ";
+				counter-increment: li;
+			}
+		}
+
+		&[type="a"] {
+			> li {
+				&:before {
+					content: counter(li, lower-alpha) ". ";
+				}
+			}
+		}
+
+		&[type="A"] {
+			> li {
+				&:before {
+					content: counter(li, upper-alpha) ". ";
+				}
+			}
+		}
+
+		&[type="i"] {
+			> li {
+				&:before {
+					content: counter(li, lower-roman) ". ";
+				}
+			}
+		}
+
+		&[type="I"] {
+			> li {
+				&:before {
+					content: counter(li, upper-roman) ". ";
+				}
+			}
+		}
+	}
+
+	ul {
+		list-style: none;
+
+		li {
+
+			&:before {
+				width: 5px;
+				height: 5px;
+
+				background: #eee;
+				border-radius: 100%;
+				content: "";
+				display: block;
+				float: left;
+				margin: 10px 0 0 -20px;
+			}
+		}
+	}
+
+	/* Tables
+	============================================================================= */
+
+	table {
+
+		thead,
+		tbody {
+
+		}
+
+		thead {
+			
+		}
+
+		tbody {
+
+		}
+
+		tr {
+
+		}
+
+		th,
+		td {
+
+		}
+
+		th {
+
+		}
+		
+		td {
+			
+		}
+	}
+
+	// Modified from Bootstrap
+
+	.table_wrapper {
+		// Workaround for IE9 bug (see https://github.com/twbs/bootstrap/issues/14837)
+		min-height: 0.01%;
+
+		@media @max_md {
+			.margined;
+
+			width: 100%;
+			
+			border-left:  1px solid #CCC;
+			border-right: 1px solid #CCC;
+			overflow-y: hidden;
+			-ms-overflow-style: -ms-autohiding-scrollbar;
+			
+			> table {
+				margin: 0;
+				border: 0;
+
+				> tbody {
+					border: none;
+				}
+
+				> thead,
+				> tbody,
+				> tfoot {
+					> tr {
+						> th,
+						> td {
+							white-space: nowrap;
+						}
+						> th:first-child,
+						> td:first-child {
+							border-left: 0;
+						}
+						> th:last-child,
+						> td:last-child {
+							border-right: 0;
+						}
+					}
+				}
+
+				> tbody,
+				> tfoot {
+					> tr:last-child {
+						> th,
+						> td {
+							border-bottom: 0;
+						}
+					}
+				}
+			}
+		}
+	}
