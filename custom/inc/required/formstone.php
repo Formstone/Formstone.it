@@ -33,8 +33,8 @@
 					foreach ($set["components"] as $component) {
 						$route = str_ireplace("-", "", $cms->urlify($component["name"]));
 						$child = array(
-							"title" => $component["name"],
-							"link"  => $this->PageLink . $route . "/"
+							"name" => $component["name"],
+							"link" => $this->PageLink . $route . "/"
 						);
 						$data = json_decode(file_get_contents(SERVER_ROOT . "site/formstone/docs/json/" . $route . ".json"), true);
 
