@@ -1,0 +1,6 @@
+[submodule "bigtree"]
+	path = bigtree
+	url = https://github.com/bigtreecms/BigTree-CMS.git
+[submodule "site/formstone"]
+	path = site/formstone
+	url = https://github.com/Formstone/Formstone.git
