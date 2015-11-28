@@ -3,17 +3,98 @@
 ============================================================================= */
 
 	.page_wrapper {
-
+		background: @white;
 	}
 
 	.page {
 
 	}
 
-	.page_header {
-		
+
+	main:focus {
+		outline: none;
 	}
 
-	.page_content {
 
+	.header {
+		background: @yellow;
+		padding: 20px 0;
+	}
+
+	.header_logo {
+		.sans();
+		.font_size(18);
+
+		color: @blue;
+		float: left;
+	}
+
+	.header_handle {
+		display: none;
+		float: right;
+
+		&.fs-navigation-enabled {
+			display: block;
+		}
+	}
+
+
+	.page_header {
+		background: @yellow;
+		padding: 40px 0;
+	}
+
+	.page_heading {
+		.heading_1;
+
+		margin: 0;
+	}
+
+	.page_intro {
+		.sans(300);
+		.font_size(20);
+
+		color: @white;
+		margin: 31px 0 0;
+	}
+
+
+
+
+	.page_content {
+		padding: 60px 0;
+	}
+
+
+
+	.nav_set {
+		margin: 0 0 20px;
+	}
+
+	.nav_heading {
+		.heading_4;
+	}
+
+	.nav_children {
+
+	}
+
+	.nav_link {
+		.serif();
+		.font_size(18);
+
+		display: block;
+		color: @blue;
+		margin: 5px 0;
+	}
+
+
+
+	.mobile_navigation {
+		display: none;
+		padding: 30px 30px 100px;
+
+		.fs-navigation-enabled {
+			display: block;
+		}
 	}

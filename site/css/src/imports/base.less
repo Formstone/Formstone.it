@@ -7,9 +7,17 @@
 		background: @true_white;
 	}
 
+	html {
+		font-size: 16px;
+	}
+
 	body {
+		.sans();
+		.font_size(16);
+
 		min-width: 300px;
 
+		line-height: 1.6;
 		overflow-x: hidden;
 	}
 
@@ -256,12 +264,12 @@
 		user-select: none;
 	}
 
-	.hidden {
+	.hide {
 		display: none !important;
 		visibility: hidden;
 	}
 
-	.visually_hidden {
+	.visually_hide {
 		width: 1px;
 		height: 1px;
 

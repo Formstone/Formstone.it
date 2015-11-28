@@ -360,7 +360,7 @@ module.exports = function(grunt) {
 	}
 
 	// Default task
-	grunt.registerTask('default', [ 'clean', 'less:production', 'postcss:production', 'stripmq', 'bless', 'js', 'img', 'html' ]);
+	grunt.registerTask('default', [ 'clean', 'less:production', 'postcss:production', 'stripmq', 'bless', 'js', 'img'/* , 'html' */ ]);
 
 	// CSS
 	grunt.registerTask('css', [ 'less:target', 'postcss:target', 'stripmq', 'bless' ]);
@@ -372,12 +372,12 @@ module.exports = function(grunt) {
 	grunt.registerTask('img', [ 'imagemin', 'svgmin' ]);
 
 	// HTML
-	grunt.registerTask('html', [ 'includereplace:static', 'prettify' ]);
+	// grunt.registerTask('html', [ 'includereplace:static', 'prettify' ]);
 
 	// Develop
 	grunt.registerTask('devel', ['browserSync', 'watch']);
 
 	// Debug (expanded files)
-	grunt.registerTask('debug', [ 'clean', 'less:target', 'postcss:target', 'stripmq', 'jshint', 'concat', 'includereplace:target', 'img', 'html' ]);
+	grunt.registerTask('debug', [ 'clean', 'less:target', 'postcss:target', 'stripmq', 'jshint', 'concat', 'includereplace:target', 'img'/* , 'html' */ ]);
 
 };

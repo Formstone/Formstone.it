@@ -51,10 +51,40 @@
 	@true_white: #fff;
 	@true_black: #000;
 
+	@white: #fff;
+	@black: #222;
+
+
+	@blue:   #2A475E;
+	@yellow: #FDBE49;
+	@red:    #CD1232;
+
+	@gray_light: #EEEEEE;
+	@gray:       #999999;
+	@gray_dark:  #555555;
+	@gray_text:  #333333;
+
 
 /* ==========================================================================
 	Mixins
 ============================================================================= */
+
+
+	.sans(@weight:400) {
+		font-family: 'Open Sans', sans-serif;
+		font-weight: @weight;
+	}
+
+	.serif(@weight:400) {
+		font-family: 'Vollkorn', serif;
+		font-weight: @weight;
+	}
+
+	.mono(@weight:400) {
+		font-family: 'Fira Mono', monospace;
+		font-weight: @weight;
+	}
+
 
 	.transition(@duration:0.25s, @timing:linear, @delay:0) {
 		transition:

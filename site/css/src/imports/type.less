@@ -3,19 +3,41 @@
 ============================================================================= */
 
 	.heading_1 {
+		.serif();
+		.font_size(46);
 
+		color: @blue;
+		line-height: 1.2;
+		margin: 20px 0 15px;
 	}
 
 	.heading_2 {
+		.serif();
+		.font_size(40);
 
+		color: @blue;
+		line-height: 1.2;
+		margin: 30px 0 15px;
 	}
 
 	.heading_3 {
+		.sans();
+		.font_size(28);
 
+		color: @gray_dark;
+		line-height: 1.2;
+		margin: 30px 0 15px;
 	}
 
 	.heading_4 {
+		.sans(600);
+		.font_size(12);
 
+		color: @gray;
+		letter-spacing: 0.2em;
+		line-height: 1.3;
+		margin: 10px 0;
+		text-transform: uppercase;
 	}
 
 	.heading_5 {
@@ -27,15 +49,44 @@
 	}
 
 	.body_text() {
+		.sans();
+		.font_size(16);
 
+		color: @gray_text;
 	}
 
 	h1, h2, h3, h4, h5, h6 {  }
 
-	p {  }
+	p {
+		margin: 15px 0 20px 0;
+	}
 
 	a {
 		.transition_link();
+	}
+
+	code,
+	pre {
+		.mono();
+		.font_size(14);
+
+		background: @gray_light;
+		border-radius: 2px;
+		color: @gray_text;
+	}
+
+	code {
+		padding: 1px 3px 0;
+	}
+
+	pre {
+		padding: 20px 25px;
+
+		code {
+			background: none;
+			border-radius: 0;
+			padding: 0;
+		}
 	}
 
 	:link {
@@ -114,6 +165,11 @@
 			.body_text();
 		}
 	}
+
+	.typography {
+		.type();
+	}
+
 
 	/* WYSIWYG Images
 	============================================================================= */
@@ -211,6 +267,9 @@
 	============================================================================= */
 
 	table {
+		width: 100%;
+
+		margin: 30px 0;
 
 		thead,
 		tbody {
@@ -218,7 +277,7 @@
 		}
 
 		thead {
-			
+			text-align: left;
 		}
 
 		tbody {
@@ -231,15 +290,20 @@
 
 		th,
 		td {
-
+			vertical-align: top;
 		}
 
 		th {
+			.heading_4;
 
+			background: @gray_light;
+			padding: 10px 20px;
 		}
-		
+
 		td {
-			
+			border-bottom: 1px solid @gray_light;
+			color: @gray_text;
+			padding: 15px 20px;
 		}
 	}
 
@@ -253,12 +317,12 @@
 			.margined;
 
 			width: 100%;
-			
+
 			border-left:  1px solid #CCC;
 			border-right: 1px solid #CCC;
 			overflow-y: hidden;
 			-ms-overflow-style: -ms-autohiding-scrollbar;
-			
+
 			> table {
 				margin: 0;
 				border: 0;

@@ -39,15 +39,22 @@
   "js": {
     "js/site.js": [
 	  "js/src/lib/utils.js",
-      "components/jquery/dist/jquery.min.js",
-      "components/formstone/dist/js/core.js",
-      "components/formstone/dist/js/mediaquery.js",
+      "bower/jquery/dist/jquery.min.js",
+      "bower/picturefill/dist/picturefill.min.js",
+      "formstone/dist/js/core.js",
+      "formstone/dist/js/mediaquery.js",
+      "formstone/dist/js/navigation.js",
+      "formstone/dist/js/swap.js",
+      "formstone/dist/js/touch.js",
       "js/src/site.js",
       "js/src/modules/page.js"
     ],
+    "js/site-prism.js": [
+	    "bower/prism/prism.js"
+    ],
     "js/site-ie8.js": [
-      "components/html5shiv/dist/html5shiv.min.js",
-      "components/html5shiv/dist/html5shiv-printshiv.min.js",
+      "bower/html5shiv/dist/html5shiv.min.js",
+      "bower/html5shiv/dist/html5shiv-printshiv.min.js",
       "js/src/ie/matchMedia.ie8.js"
     ],
     "js/site-ie9.js": [

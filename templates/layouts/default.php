@@ -1,3 +1,5 @@
 <? include "_header.php" ?>
-<?=$bigtree["content"]?>
+<main id="page" class="page" role="main" tabindex="-1">
+	<?=$bigtree["content"]?>
+</main>
 <? include "_footer.php" ?>

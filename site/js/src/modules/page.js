@@ -10,9 +10,11 @@
 
 			/* Plugin Defaults */
 
+/*
 			$.lightbox("defaults", {
 				mobile: true
 			});
+*/
 
 
 			/* Picturefill */
@@ -55,7 +57,7 @@
 			Site.$body.find(".js-checkbox, .js-radio, input[type=checkbox], input[type=radio]").checkbox();
 			Site.$body.find(".js-dropdown").dropdown();
 			Site.$body.find(".js-equalize").equalize();
-			Site.$body.find(".js-lightbox").lightbox({ mobile: true });
+			Site.$body.find(".js-lightbox").lightbox();
 			Site.$body.find("input[type=number]").number();
 			Site.$body.find("input[type=range]").range();
 			Site.$body.find(".js-swap").swap();
@@ -128,7 +130,7 @@
 		}
 
 		function scroll() {
-			
+
 		}
 
 		function resize() {
@@ -188,6 +190,6 @@
 		Site.onInit.push(init);
 
 		return {
-			
+
 		};
 	})(jQuery, Site);

@@ -11,10 +11,10 @@
 		<h4><?=$set["name"]?></h4>
 		<ul>
 			<?php
-				foreach ($set["children"] as $component) {
+				foreach ($set["children"] as $child) {
 			?>
 			<li>
-				<a href="<?=$component["link"]?>"><?=$component["name"]?></a>
+				<a href="<?=$child["link"]?>"><?=$child["name"]?></a>
 			</li>
 			<?php
 				}

@@ -1,3 +1,0 @@
-<?php
-	$formstone = new Formstone;
-?>
