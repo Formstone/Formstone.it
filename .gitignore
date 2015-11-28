@@ -3,4 +3,6 @@
 /custom/environment.php
 /backups
 /site/files
+/site/node_modules
+/site/node_cache
 /reports
