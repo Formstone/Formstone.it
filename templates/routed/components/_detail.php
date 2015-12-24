@@ -8,7 +8,7 @@
 <header class="page_header">
 	<div class="fs-row">
 		<div class="fs-cell fs-lg-3">
-			<h1 class="page_heading"><?=$component["name"]?></h1>
+			<h1 class="page_heading"><?=strip_tags($component["name"])?></h1>
 		</div>
 		<div class="fs-cell-right fs-lg-9">
 			<div class="page_intro">
@@ -19,7 +19,7 @@
 </header>
 <div class="page_content">
 	<div class="fs-row">
-		<aside class="fs-cell fs-sm-hide fs-md-hide fs-lg-3">
+		<aside class="fs-cell fs-sm-hide fs-md-hide fs-lg-2">
 			<?php include "../templates/layouts/_navigation.php"; ?>
 		</aside>
 		<div class="fs-cell-right fs-lg-9 typography">
