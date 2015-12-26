@@ -66,10 +66,11 @@
 			$use_link  = '<li><a href="#use">Use</a></li>';
 			$demo_link = '';
 
-			if ($child["demo"]) {
+			if ($data["demo"]) {
 				$use_link   = '<li><a href="#demo">Demo</a></li>' . $use_link;
 				$demo_link .= '<h2><a name="demo"></a> Demo</h2>';
 				$demo_link .= '<a href="' . $data["link"] . 'demo/">View Demo</a>';
+				// $demo_link .= $data["demo"];
 			}
 
 			$search = array(

@@ -22,7 +22,7 @@
 				<?php include "../templates/layouts/_navigation.php"; ?>
 			</aside>
 			<div class="fs-cell-right fs-lg-9 typography">
-				<?=$component["content"]?>
+
 			</div>
 		</div>
 	</div>

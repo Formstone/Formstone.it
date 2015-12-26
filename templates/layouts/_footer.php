@@ -13,9 +13,6 @@
 			<?php include "../templates/layouts/_navigation.php"; ?>
 		</aside>
 
-		<!-- Compiled JS -->
-		<script src="<?=WWW_ROOT?>js/site.js"></script>
-
 		<!-- Grid Bookmarklet -->
 		<script>
 			(function(){if(typeof FSGridBookmarklet==='undefined'){document.body.appendChild(document.createElement('script')).src='http://formstone.it/js/bookmarklet/grid.js';}else{FSGridBookmarklet();}})();

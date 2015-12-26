@@ -70,6 +70,9 @@
 		<!--[if lte IE 9]>
 			<link rel="stylesheet" href="<?=WWW_ROOT?>css/site-ie.css">
 		<![endif]-->
+
+		<!-- Compiled JS -->
+		<script src="<?=WWW_ROOT?>js/site.js"></script>
 	</head>
 	<body class="fs-grid fs-grid-sm-fluid">
 		<a href="#page" id="skip_to_content" class="offscreen">Skip to Main Content</a>
