@@ -5,7 +5,7 @@
 	);
 ?>
 			<footer id="footer" class="footer" role="contentinfo">
-
+				Content!
 			</footer>
 		</div>
 

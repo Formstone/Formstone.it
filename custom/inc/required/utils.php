@@ -1,8 +1,6 @@
 <?
-
-	// Utilities
-
 	class Utils {
+
 		public static function jsonAttribute($data) {
 			if (is_array($data)) {
 				$data = json_encode($data);
@@ -171,5 +169,3 @@
 			return explode(" ", $return);
 		}
 	}
-
-?>

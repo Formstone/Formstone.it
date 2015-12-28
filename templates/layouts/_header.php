@@ -81,6 +81,16 @@
 				<div class="fs-row">
 					<div class="fs-cell">
 						<a href="<?=WWW_ROOT?>" class="header_logo">Formstone</a>
+						<?php if (!$isHome) { ?>
+						<div class="header_buttons">
+							<span class="version_info">
+								v0.9.0
+								<a href="#">View Changelog</a>
+							</span>
+							<a href="#" class="button button_bordered_white button_small">Download</a>
+							<a href="#" class="button button_bordered_white button_small">GitHub</a>
+						</div>
+						<?php } ?>
 						<span class="header_handle js-mobile_navigation_handle">Navigation</span>
 					</div>
 				</div>

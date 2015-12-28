@@ -16,9 +16,19 @@
 	}
 
 
+
+
 	.header {
+		height: 50px;
+
 		background: @primary_dark;
-		padding: 20px 0;
+		padding: 10px 0;
+
+		@media @min_md {
+			height: 75px;
+
+			padding: 20px 0;
+		}
 	}
 
 	.header_logo {
@@ -29,6 +39,22 @@
 		float: left;
 	}
 
+	.header_buttons {
+		float: right;
+
+		@media @max_lg {
+			display: none;
+		}
+
+		.button {
+			margin: 0 0 0 5px;
+		}
+
+		.version_info {
+			margin: 0 10px 0 0;
+		}
+	}
+
 	.header_handle {
 		.heading_5;
 
@@ -36,7 +62,8 @@
 		color: @white;
 		display: none;
 		float: right;
-		padding: 0 40px 0 0;
+		margin: 2px 0 0;
+		padding: 5px 40px 5px 5px;
 
 		&.fs-navigation-enabled {
 			display: block;
@@ -60,12 +87,33 @@
 	}
 
 
+	.footer {
+		background: @primary_dark;
+		padding: 50px 0;
+	}
+
+
 	.page_header {
 		background: @primary;
 		padding: 40px 0;
 
 		@media @min_lg {
 			padding: 60px 0;
+		}
+
+		// Buttons
+
+		.button {
+
+			@media @min_sm @and_max_md {
+				width: 49%;
+
+				float: left;
+
+				&.second {
+					float: right;
+				}
+			}
 		}
 	}
 
@@ -108,6 +156,9 @@
 	.page_content {
 		padding: 60px 0;
 	}
+
+
+	// Navs
 
 
 
@@ -208,6 +259,23 @@
 	}
 
 
+	// Home
+
+	.version_info {
+		.sans();
+		.font_size(12);
+
+		color: @primary_light;
+
+		a {
+			color: @primary_light;
+			margin: 0 0 0 10px;
+
+			.no-touchevents &:hover {
+				color: @white;
+			}
+		}
+	}
 
 
 	.home {
@@ -230,53 +298,13 @@
 				.font_size(50);
 			}
 		}
-	}
 
-
-
-	.button {
-		.sans();
-		.font_size(16);
-
-		background: transparent;
-		border: 2px solid @white;
-		border-radius: 2px;
-		color: @white;
-		display: block;
-		margin: 0 0 10px;
-		padding: 10px 20px;
-		text-align: center;
-
-		.no-touchevents &:hover {
-			background: @white;
-			color: @primary_dark;
-		}
-
-		@media @min_sm @and_max_md {
-			width: 49%;
-
-			float: left;
-
-			&.second {
-				float: right;
-			}
+		.version_info {
+			clear: both;
+			display: block;
+			text-align: center;
 		}
 	}
 
-	.version_info {
-		.sans();
-		.font_size(12);
 
-		clear: both;
-		color: @primary_light;
-		text-align: center;
 
-		a {
-			color: @primary_light;
-			margin: 0 0 0 10px;
-
-			.no-touchevents &:hover {
-				color: @white;
-			}
-		}
-	}
