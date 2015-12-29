@@ -8,6 +8,7 @@
 		var $CacheAge = 604800;
 		var $PageLink = "";
 
+		var $Package = array();
 		var $Navigation = array();
 		var $Components = array();
 
@@ -23,9 +24,12 @@
 			$cache = $this->expandRoots(BigTreeCMS::cacheGet($this->CacheID, $this->CacheKey, $this->CacheAge));
 
 			if (!$this->Debug && array_filter((array)$cache)) {
+				$this->Package    = $cache["package"];
 				$this->Navigation = $cache["navigation"];
 				$this->Components = $cache["components"];
 			} else {
+				$this->Package = json_decode(file_get_contents(SERVER_ROOT . "site/formstone/package.json"), true);
+
 				$index = json_decode(file_get_contents(SERVER_ROOT . "site/formstone/docs/json/index.json"), true);
 
 				foreach ($index as $set => $components) {
@@ -52,6 +56,8 @@
 					"navigation" => $this->Navigation,
 					"components" => $this->Components
 				));
+
+				$cache["package"] = $this->Package;
 
 				BigTreeCMS::cachePut($this->CacheID, $this->CacheKey, $cache);
 			}

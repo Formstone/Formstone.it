@@ -60,9 +60,19 @@
 			Site.$body.find(".js-lightbox").lightbox();
 			Site.$body.find("input[type=number]").number();
 			Site.$body.find("input[type=range]").range();
-			Site.$body.find(".js-swap").swap();
 			Site.$body.find(".js-tabs").tabs();
 			*/
+
+			Site.$body.find(".js-swap").swap();
+
+
+			Site.$body.find(".section_nav").navigation({
+				maxWidth: "739px",
+				labels: {
+					open: "Close",
+					closed: "Jump To"
+				}
+			});
 
 
 			/* Wrapper for Tables */

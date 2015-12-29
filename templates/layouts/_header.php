@@ -7,7 +7,7 @@
 		<meta name="mobile-web-app-capable" content="yes">
 
 		<!-- Page Attributes -->
-		<title></title>
+		<title><?=$formstone->Package["realname"]?></title>
 		<meta name="description" content="">
 
 		<? /*
@@ -50,7 +50,7 @@
 		<script src="<?=WWW_ROOT?>js/modernizr.js"></script>
 
 		<!-- Fonts -->
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Vollkorn|Open+Sans:400,300,600|Fira+Mono">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:Fira+Mono">
 
 		<!--[if gt IE 8]><!-->
 			<link rel="stylesheet" href="<?=WWW_ROOT?>css/site.css">
@@ -74,24 +74,43 @@
 		<!-- Compiled JS -->
 		<script src="<?=WWW_ROOT?>js/site.js"></script>
 	</head>
-	<body class="fs-grid fs-grid-sm-fluid">
+	<body class="fs-grid fs-grid-fluid">
+		<!-- Google Tag Manager -->
+		<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-T4HSP3"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-T4HSP3');</script>
+		<!-- End Google Tag Manager -->
+
+		<!-- BuySellAds -->
+		<script type="text/javascript">
+		(function(){
+			var bsa = document.createElement('script');
+			bsa.type = 'text/javascript';
+			bsa.async = true;
+			bsa.src = '//s3.buysellads.com/ac/bsa.js';
+			(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+		})();
+		</script>
+		<!-- End BuySellAds -->
+
 		<a href="#page" id="skip_to_content" class="offscreen">Skip to Main Content</a>
-		<div class="page_wrapper js-mobile_navigation_content">
-			<header class="header">
-				<div class="fs-row">
-					<div class="fs-cell">
-						<a href="<?=WWW_ROOT?>" class="header_logo">Formstone</a>
-						<?php if (!$isHome) { ?>
-						<div class="header_buttons">
-							<span class="version_info">
-								v0.9.0
-								<a href="#">View Changelog</a>
-							</span>
-							<a href="#" class="button button_bordered_white button_small">Download</a>
-							<a href="#" class="button button_bordered_white button_small">GitHub</a>
-						</div>
-						<?php } ?>
-						<span class="header_handle js-mobile_navigation_handle">Navigation</span>
+		<header class="header">
+			<div class="fs-row">
+				<div class="fs-cell">
+					<a href="<?=WWW_ROOT?>" class="header_logo"><?=$formstone->Package["realname"]?></a>
+					<span class="header_version">v<?=$formstone->Package["version"]?></span>
+					<?php if (!$isHome) { ?>
+					<div class="header_buttons">
+						<a href="#" class="button button_bordered_white button_small">Download</a>
+						<a href="<?=$formstone->Package["repository"]["url"]?>" class="button button_bordered_white button_small">GitHub</a>
 					</div>
+					<?php } ?>
+					<span class="header_handle js-mobile_navigation_handle">Navigation</span>
 				</div>
-			</header>
+			</div>
+		</header>
+		<div class="page_wrapper js-mobile_navigation_content">

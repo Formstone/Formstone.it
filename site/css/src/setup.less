@@ -10,15 +10,15 @@
 
 	// Width Media Queries
 
-	@min_sm:      ~"only screen and (min-width:" (@mq_min_sm * 1px) + ~")";
-	@min_md:      ~"only screen and (min-width:" (@mq_min_md * 1px) + ~")";
-	@min_lg:      ~"only screen and (min-width:" (@mq_min_lg * 1px) + ~")";
-	@min_xl:      ~"only screen and (min-width:" (@mq_min_xl * 1px) + ~")";
+	@min_sm:	  ~"only screen and (min-width:" (@mq_min_sm * 1px) + ~")";
+	@min_md:	  ~"only screen and (min-width:" (@mq_min_md * 1px) + ~")";
+	@min_lg:	  ~"only screen and (min-width:" (@mq_min_lg * 1px) + ~")";
+	@min_xl:	  ~"only screen and (min-width:" (@mq_min_xl * 1px) + ~")";
 
-	@max_sm:      ~"only screen and (max-width:" (@mq_min_sm - 1px) + ~")";
-	@max_md:      ~"only screen and (max-width:" (@mq_min_md - 1px) + ~")";
-	@max_lg:      ~"only screen and (max-width:" (@mq_min_lg - 1px) + ~")";
-	@max_xl:      ~"only screen and (max-width:" (@mq_min_xl - 1px) + ~")";
+	@max_sm:	  ~"only screen and (max-width:" (@mq_min_sm - 1px) + ~")";
+	@max_md:	  ~"only screen and (max-width:" (@mq_min_md - 1px) + ~")";
+	@max_lg:	  ~"only screen and (max-width:" (@mq_min_lg - 1px) + ~")";
+	@max_xl:	  ~"only screen and (max-width:" (@mq_min_xl - 1px) + ~")";
 
 	@and_max_sm:  ~"and (max-width:" (@mq_min_sm - 1px) + ~")";
 	@and_max_md:  ~"and (max-width:" (@mq_min_md - 1px) + ~")";
@@ -27,11 +27,11 @@
 
 	// Height Media Queries
 
-	@min_ht:        ~"(max-height:" (@mq_min_ht * 1px) + ~")";
-	@max_ht:        ~"(max-height:" (@mq_min_ht - 1px) + ~")";
+	@min_ht:		~"(max-height:" (@mq_min_ht * 1px) + ~")";
+	@max_ht:		~"(max-height:" (@mq_min_ht - 1px) + ~")";
 
-	@and_min_ht:    ~"and (min-height:" (@mq_min_ht * 1px) + ~")";
-	@and_max_ht:    ~"and (max-height:" (@mq_min_ht - 1px) + ~")";
+	@and_min_ht:	~"and (min-height:" (@mq_min_ht * 1px) + ~")";
+	@and_max_ht:	~"and (max-height:" (@mq_min_ht - 1px) + ~")";
 
 	// Other
 
@@ -61,10 +61,10 @@
 	@yellow:		#FFC107;
 	@yellow_light:	#FFECB3;
 
-	@red:    		#FF5252;
+	@red:			#FF5252;
 
 	@gray_light: #EEEEEE;
-	@gray:       #999999;
+	@gray:	   #999999;
 	@gray_dark:  #555555;
 	@gray_text:  #333333;
 
@@ -99,6 +99,21 @@
 		font-family: 'Fira Mono', monospace;
 		font-weight: @weight;
 	}
+
+/*
+	.icon() {
+		font-family: 'Material Icons';
+		font-weight: normal;
+		font-style: normal;
+
+		-webkit-font-smoothing: antialiased;
+		text-rendering: optimizeLegibility;
+		-moz-osx-font-smoothing: grayscale;
+		font-feature-settings: 'liga';
+	}
+*/
+
+
 
 
 	.transition(@duration:0.25s, @timing:linear, @delay:0) {
