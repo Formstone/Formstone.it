@@ -3,7 +3,6 @@
 ============================================================================= */
 
 	.heading_1 {
-		// .serif();
 		.sans();
 		.font_size(38);
 
@@ -11,13 +10,12 @@
 		line-height: 1.2;
 		margin: 20px 0 15px;
 
-		@media @min_xl {
+		@media @min_lg {
 			.font_size(46);
 		}
 	}
 
 	.heading_2 {
-		// .serif();
 		.sans();
 		.font_size(30);
 
@@ -25,7 +23,7 @@
 		line-height: 1.2;
 		margin: 30px 0 15px;
 
-		@media @min_xl {
+		@media @min_lg {
 			.font_size(36);
 		}
 	}
@@ -38,7 +36,7 @@
 		line-height: 1.2;
 		margin: 30px 0 15px;
 
-		@media @min_xl {
+		@media @min_lg {
 			.font_size(30);
 		}
 	}
@@ -51,7 +49,7 @@
 		line-height: 1.2;
 		margin: 30px 0 15px;
 
-		@media @min_xl {
+		@media @min_lg {
 			.font_size(22);
 		}
 	}
@@ -93,7 +91,7 @@
 		.mono();
 		.font_size(14);
 
-		background: @gray_light;
+		background: @gray_50;
 		border-radius: 2px;
 		color: @gray_text;
 	}
@@ -189,6 +187,7 @@
 			.body_text();
 		}
 
+/*
 		a {
 			border-bottom: 1px solid transparent;
 			color: @accent;
@@ -197,12 +196,13 @@
 				border-color: inherit;
 			}
 		}
+*/
 
 		hr {
 			height: 1px;
 
 			border: none;
-			background: @gray_light;
+			background: @gray_50;
 			margin: 30px 0;
 
 			@media @min_md {
@@ -341,12 +341,13 @@
 		th {
 			.heading_5;
 
-			background: @gray_light;
+			background: @primary;
+			color: @white;
 			padding: 10px 20px;
 		}
 
 		td {
-			border-bottom: 1px solid @gray_light;
+			border-bottom: 1px solid @gray_50;
 			color: @gray_text;
 			padding: 15px 20px;
 		}
@@ -358,14 +359,14 @@
 		// Workaround for IE9 bug (see https://github.com/twbs/bootstrap/issues/14837)
 		min-height: 0.01%;
 
-		@media @max_md {
+		@media @max_lg {
 			.margined;
 
 			width: 100%;
 
-			border-left:   1px solid @gray_light;
-			border-right:  1px solid @gray_light;
-			border-bottom: 1px solid @gray_light;
+			border-left:   1px solid @gray_50;
+			border-right:  1px solid @gray_50;
+			border-bottom: 1px solid @gray_50;
 			overflow-y: hidden;
 			-ms-overflow-style: -ms-autohiding-scrollbar;
 

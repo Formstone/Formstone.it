@@ -13,6 +13,7 @@
 /*
 			$.lightbox("defaults", {
 				mobile: true
+				// fixed: true
 			});
 */
 
@@ -57,15 +58,17 @@
 			Site.$body.find(".js-checkbox, .js-radio, input[type=checkbox], input[type=radio]").checkbox();
 			Site.$body.find(".js-dropdown").dropdown();
 			Site.$body.find(".js-equalize").equalize();
-			Site.$body.find(".js-lightbox").lightbox();
+
 			Site.$body.find("input[type=number]").number();
 			Site.$body.find("input[type=range]").range();
 			Site.$body.find(".js-tabs").tabs();
 			*/
 
+//			Site.$body.find(".js-lightbox").lightbox();
 			Site.$body.find(".js-swap").swap();
 
 
+/*
 			Site.$body.find(".section_nav").navigation({
 				maxWidth: "739px",
 				labels: {
@@ -73,6 +76,7 @@
 					closed: "Jump To"
 				}
 			});
+*/
 
 
 			/* Wrapper for Tables */
@@ -163,6 +167,10 @@
 		function scrollToElement(id) {
 			var $to = $(id);
 
+			if (!$to.length) {
+				$to = $("[name=" + id.replace("#", "") + "]");
+			}
+
 			if ($to.length) {
 				var offset = $to.offset();
 
@@ -200,6 +208,6 @@
 		Site.onInit.push(init);
 
 		return {
-
+			onScrollTo: onScrollTo
 		};
 	})(jQuery, Site);

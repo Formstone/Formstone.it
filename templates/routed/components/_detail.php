@@ -9,8 +9,8 @@
 ?>
 <div class="typography">
 
-	<header class="page_header">
-		<div class="fs-row">
+	<header class="page_header js-scroll_lock" data-scroll-offset="55">
+		<div class="fs-row js-scroll_contents">
 			<div class="fs-cell">
 				<h1 class="page_heading"><?=strip_tags($component["name"])?></h1>
 				<div class="page_intro">

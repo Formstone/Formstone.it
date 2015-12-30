@@ -1,9 +1,3 @@
-<?php
-	$navigation_options = array(
-		"gravity" => "right",
-		"type"    => "reveal"
-	);
-?>
 			<footer id="footer" class="footer" role="contentinfo">
 				<div class="fs-row">
 					<div class="fs-cell fs-md-half fs-lg-half footer_meta">
@@ -20,9 +14,20 @@
 			</footer>
 		</div>
 
-		<aside class="navigation js-mobile_navigation" aria-hidden="true" data-navigation-handle=".js-mobile_navigation_handle" data-navigation-content=".js-mobile_navigation_content" data-navigation-options="<?=Utils::jsonAttribute($navigation_options)?>">
+		<?php
+			$navigation_options = array(
+				"gravity" => "right",
+				"type"    => "overlay"
+			);
+		?>
+		<div class="navigation js-mobile_navigation" data-navigation-handle=".js-mobile_navigation_handle" data-navigation-content=".js-mobile_navigation_content" data-navigation-options="<?=Utils::jsonAttribute($navigation_options)?>">
+
+			<div class="nav_header">
+				<?php include "../templates/layouts/_branding.php"; ?>
+			</div>
+
 			<?php include "../templates/layouts/_navigation.php"; ?>
-		</aside>
+		</div>
 
 		<!-- Grid Bookmarklet -->
 		<script>

@@ -75,6 +75,7 @@
 		<script src="<?=WWW_ROOT?>js/site.js"></script>
 	</head>
 	<body class="fs-grid fs-grid-fluid">
+
 		<!-- Google Tag Manager -->
 		<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-T4HSP3"
 		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -98,19 +99,14 @@
 		<!-- End BuySellAds -->
 
 		<a href="#page" id="skip_to_content" class="offscreen">Skip to Main Content</a>
-		<header class="header">
-			<div class="fs-row">
-				<div class="fs-cell">
-					<a href="<?=WWW_ROOT?>" class="header_logo"><?=$formstone->Package["realname"]?></a>
-					<span class="header_version">v<?=$formstone->Package["version"]?></span>
-					<?php if (!$isHome) { ?>
-					<div class="header_buttons">
-						<a href="#" class="button button_bordered_white button_small">Download</a>
-						<a href="<?=$formstone->Package["repository"]["url"]?>" class="button button_bordered_white button_small">GitHub</a>
-					</div>
-					<?php } ?>
-					<span class="header_handle js-mobile_navigation_handle">Navigation</span>
-				</div>
-			</div>
-		</header>
+
 		<div class="page_wrapper js-mobile_navigation_content">
+
+			<header class="header">
+				<div class="fs-row">
+					<div class="fs-cell">
+						<?php include "../templates/layouts/_branding.php"; ?>
+						<span class="header_handle js-mobile_navigation_handle">Navigation</span>
+					</div>
+				</div>
+			</header>

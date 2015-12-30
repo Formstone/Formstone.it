@@ -14,7 +14,7 @@
 
 		var $Parsedown;
 
-		var $Debug = false;
+		var $Debug = true;
 
 		public function __construct() {
 			global $cms;
@@ -67,15 +67,25 @@
 			$data = $this->parseMarkdown(json_decode(file_get_contents(SERVER_ROOT . "site/formstone/docs/json/" . $route . ".json"), true));
 			$data["link"] = $this->PageLink . $route . "/";
 
-			$nav_start = '<nav class="section_nav">';
-			$nav_end   = '</nav>';
+			$nav_start  = '<div class="section_nav_wrapper js-scroll_lock" data-scroll-offset="-100">';
+			$nav_start .= '<div class="fs-row js-scroll_contents">';
+			$nav_start .= '<nav class="fs-cell section_nav js-scroll_spy">';
+
+			$nav_end    = '</nav>';
+			$nav_end   .= '</div>';
+			$nav_end   .= '</div>';
+
 			$use_link  = '<li><a href="#use">Use</a></li>';
 			$demo_link = '';
 
 			if ($data["demo"]) {
 				$use_link   = '<li><a href="#demo">Demo</a></li>' . $use_link;
 				$demo_link .= '<h2><a name="demo"></a> Demo</h2>';
-				$demo_link .= '<a href="' . $data["link"] . 'demo/">View Demo</a>';
+				$demo_link .= '<p>Demos are largely unstyled to give developers a better idea of how the plugin can drop into a new or existing project.</p>';
+
+				$demo_link .= '<a href="' . WWW_ROOT . 'formstone/demo/components/' . $route . '.html" class="button" target="_blank">View Demo</a>';
+
+				// $demo_link .= '<a href="' . $data["link"] . 'demo/" class="button">View Demo</a>';
 				// $demo_link .= $data["demo"];
 			}
 

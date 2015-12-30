@@ -64,7 +64,8 @@
       "formstone/dist/js/transition.js",
       "formstone/dist/js/upload.js",
       "js/src/site.js",
-      "js/src/modules/page.js"
+      "js/src/modules/page.js",
+      "js/src/modules/scroll.js"
     ],
     "js/site-prism.js": [
 	    "bower/prism/prism.js"
