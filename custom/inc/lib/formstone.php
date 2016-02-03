@@ -28,9 +28,9 @@
 				$this->Navigation = $cache["navigation"];
 				$this->Components = $cache["components"];
 			} else {
-				$this->Package = json_decode(file_get_contents(SERVER_ROOT . "site/formstone/package.json"), true);
+				$this->Package = json_decode(file_get_contents(SERVER_ROOT . "formstone/package.json"), true);
 
-				$index = json_decode(file_get_contents(SERVER_ROOT . "site/formstone/docs/json/index.json"), true);
+				$index = json_decode(file_get_contents(SERVER_ROOT . "formstone/docs/json/index.json"), true);
 
 				foreach ($index as $set => $components) {
 					$children = array();
@@ -64,7 +64,7 @@
 		}
 
 		public function buildPage($route) {
-			$data = $this->parseMarkdown(json_decode(file_get_contents(SERVER_ROOT . "site/formstone/docs/json/" . $route . ".json"), true));
+			$data = $this->parseMarkdown(json_decode(file_get_contents(SERVER_ROOT . "formstone/docs/json/" . $route . ".json"), true));
 			$data["link"] = $this->PageLink . $route . "/";
 
 			$nav_start  = '<div class="section_nav_wrapper js-scroll_lock" data-scroll-offset="-100">';
@@ -83,9 +83,8 @@
 				$demo_link .= '<h2><a name="demo"></a> Demo</h2>';
 				$demo_link .= '<p>Demos are largely unstyled to give developers a better idea of how the plugin can drop into a new or existing project.</p>';
 
-				$demo_link .= '<a href="' . WWW_ROOT . 'formstone/demo/components/' . $route . '.html" class="button" target="_blank">View Demo</a>';
-
-				// $demo_link .= '<a href="' . $data["link"] . 'demo/" class="button">View Demo</a>';
+				// $demo_link .= '<a href="' . WWW_ROOT . 'formstone/demo/components/' . $route . '.html" class="button" target="_blank">View Demo</a>';
+				$demo_link .= '<a href="' . $data["link"] . 'demo/" class="button" target="_blank">View Demo</a>';
 				// $demo_link .= $data["demo"];
 			}
 

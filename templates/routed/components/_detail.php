@@ -3,6 +3,12 @@
 
 	$isDemo = (isset($bigtree["commands"][1]) && $bigtree["commands"][1] == "demo");
 
+	if ($isDemo) {
+		print_r($component);
+
+		die();
+	}
+
 	if (!$component || (!$isDemo && isset($bigtree["commands"][1]))) {
 		$cms->catch404();
 	}
@@ -22,29 +28,9 @@
 
 	<div class="page_content">
 		<div class="fs-row">
-			<?php
-				if ($isDemo) {
-			?>
-			<div class="fs-cell">
-				<div class="section_nav">
-					<ul>
-						<li>
-							<a href="<?=$component["link"]?>">Back to Documentation</a>
-						</li>
-					</ul>
-				</div>
-				<h2>Demo</h2>
-				<?=$component["demo"]?>
-			</div>
-			<?php
-				} else {
-			?>
 			<div class="fs-cell">
 				<?=$component["content"]?>
 			</div>
-			<?php
-				}
-			?>
 		</div>
 	</div>
 
