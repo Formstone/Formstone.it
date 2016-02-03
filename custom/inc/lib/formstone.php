@@ -84,8 +84,10 @@
 				$demo_link .= '<p>Demos are largely unstyled to give developers a better idea of how the plugin can drop into a new or existing project.</p>';
 
 				// $demo_link .= '<a href="' . WWW_ROOT . 'formstone/demo/components/' . $route . '.html" class="button" target="_blank">View Demo</a>';
-				$demo_link .= '<a href="' . $data["link"] . 'demo/" class="button" target="_blank">View Demo</a>';
+				$demo_link .= '<a href="' . $data["link"] . 'demo/" class="button js-lightbox">View Demo</a>';
 				// $demo_link .= $data["demo"];
+
+				$data["demo_html"] = str_ireplace(array("../"), array(WWW_ROOT . "formstone/demo/"), file_get_contents(SERVER_ROOT . "formstone/demo/components/" . $route . ".html"));
 			}
 
 			$search = array(

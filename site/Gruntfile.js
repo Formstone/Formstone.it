@@ -128,7 +128,7 @@ module.exports = function(grunt) {
 					smarttabs: true,
 					sub:       true,
 					undef:     true,
-					unused:    true,
+					unused:    false,
 					validthis: true
 				}
 			}

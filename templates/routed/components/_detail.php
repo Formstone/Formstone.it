@@ -3,14 +3,13 @@
 
 	$isDemo = (isset($bigtree["commands"][1]) && $bigtree["commands"][1] == "demo");
 
-	if ($isDemo) {
-		print_r($component);
-
-		die();
-	}
-
 	if (!$component || (!$isDemo && isset($bigtree["commands"][1]))) {
 		$cms->catch404();
+	}
+
+	if ($isDemo && $component["demo_html"]) {
+		echo($component["demo_html"]);
+		die();
 	}
 ?>
 <div class="typography">

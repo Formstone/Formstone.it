@@ -64,7 +64,7 @@
 			Site.$body.find(".js-tabs").tabs();
 			*/
 
-//			Site.$body.find(".js-lightbox").lightbox();
+			Site.$body.find(".js-lightbox").lightbox();
 			Site.$body.find(".js-swap").swap();
 
 
