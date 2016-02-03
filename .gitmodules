@@ -3,7 +3,7 @@
 	url = https://github.com/bigtreecms/BigTree-CMS.git
 [submodule "formstone"]
 	path = formstone
-	url = https://github.com/Formstone/Formstone.git
+	url = git@github.com:Formstone/Formstone.git
 [submodule "custom/inc/lib/parsedown"]
 	path = custom/inc/lib/parsedown
 	url = https://github.com/erusev/parsedown.git
