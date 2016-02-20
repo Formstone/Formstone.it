@@ -87,6 +87,18 @@
 		@media @min_lg {
 			.font_size(20);
 		}
+
+		&:before {
+			.font_size(18);
+
+			float: left;
+			line-height: 1;
+			margin: 5px 8px 0 0;
+
+			@media @min_lg {
+				margin-top: 6px;
+			}
+		}
 	}
 
 	.header_version {
@@ -126,7 +138,7 @@
 		display: none;
 		float: right;
 		margin: 2px 0 0;
-		padding: 5px 40px 5px 5px;
+		padding: 5px;
 
 		&.fs-navigation-enabled {
 			.font_size(12);
@@ -134,8 +146,9 @@
 			background: transparent;
 			color: @white;
 			display: block;
-			padding: 5px 20px 5px 5px;
+			padding: 5px;
 
+/*
 			&:after {
 				height: 2px;
 
@@ -146,10 +159,12 @@
 					0  4px 0 @primary_light,
 					0 -4px 0 @primary_light;
 			}
+*/
 		}
 
 		&.fs-navigation-open {
 
+/*
 			&:after {
 				.font_size(20);
 
@@ -160,6 +175,15 @@
 				color: @primary_light;
 				line-height: 15px;
 			}
+*/
+		}
+
+		&:before {
+			.font_size(19);
+
+			float: right;
+			line-height: 14px;
+			margin: 0 0 0 8px;
 		}
 	}
 

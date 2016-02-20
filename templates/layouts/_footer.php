@@ -17,7 +17,8 @@
 		<?php
 			$navigation_options = array(
 				"gravity" => "right",
-				"type"    => "overlay"
+				"type"    => "overlay",
+				"theme"   => "",
 			);
 		?>
 		<div class="navigation js-mobile_navigation" data-navigation-handle=".js-mobile_navigation_handle" data-navigation-content=".js-mobile_navigation_content" data-navigation-options="<?=Utils::jsonAttribute($navigation_options)?>">
@@ -31,7 +32,7 @@
 
 		<!-- Grid Bookmarklet -->
 		<script>
-			(function(){if(typeof FSGridBookmarklet==='undefined'){document.body.appendChild(document.createElement('script')).src='http://formstone.it/js/bookmarklet/grid.js';}else{FSGridBookmarklet();}})();
+			(function(){if(typeof FSGridBookmarklet==='undefined'){document.body.appendChild(document.createElement('script')).src='//formstone.it/js/bookmarklet/grid.js';}else{FSGridBookmarklet();}})();
 		</script>
 
 	</body>

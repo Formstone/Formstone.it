@@ -43,7 +43,7 @@
 	ExpiresByType text/javascript "access plus 1 month"
 	ExpiresByType application/x-javascript "access plus 1 month"
 	ExpiresByType application/x-shockwave-flash "access plus 1 month"
-	
+
 	ExpiresByType application/vnd.ms-fontobject "access plus 1 month"
 	ExpiresByType font/ttf "access plus 1 month"
 	ExpiresByType font/otf "access plus 1 month"
@@ -60,7 +60,7 @@
 	<FilesMatch "\.(appcache|atom|crx|css|cur|eot|f4[abpv]|flv|geojson|gif|htc|ico|jpe?g|js|json(ld)?|m4[av]|manifest|map|mp4|oex|og[agv]|opus|otf|pdf|png|rdf|rss|safariextz|svgz?|swf|topojson|tt[cf]|txt|vcf|vtt|webapp|web[mp]|woff2?|xml|xpi)$">
 		Header unset X-UA-Compatible
 	</FilesMatch>
-	
+
 	Header set X-Content-Type-Options "nosniff"
 	Header set X-XSS-Protection "1; mode=block"
 	Header set X-Permitted-Cross-Domain-Policies "master-only"
@@ -76,6 +76,13 @@ IndexIgnore */*
 Options -MultiViews
 
 RewriteEngine On
+
+#Fix Bookmarklet Links
+RewriteRule ^js/bookmarklet/grid.js /bookmarklet/grid.js [R=301,L]
+RewriteRule ^css/bookmarklet/grid.css /bookmarklet/grid.css [R=301,L]
+RewriteRule ^images/bookmarklet_icons.png /bookmarklet/icons.png [R=301,L]
+
+#Back to BigTree
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^(.*)$ index.php?bigtree_htaccess_url=$1 [QSA,L]

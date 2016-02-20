@@ -7,3 +7,6 @@
 [submodule "custom/inc/lib/parsedown"]
 	path = custom/inc/lib/parsedown
 	url = https://github.com/erusev/parsedown.git
+[submodule "site/formstone"]
+	path = site/formstone
+	url = git@github.com:Formstone/Formstone.git

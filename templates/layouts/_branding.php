@@ -1,4 +1,4 @@
-<a href="<?=WWW_ROOT?>" class="header_logo"><?=$formstone->Package["realname"]?></a>
+<a href="<?=WWW_ROOT?>" class="header_logo icon-logo"><?=$formstone->Package["realname"]?></a>
 <span class="header_version">v<?=$formstone->Package["version"]?></span>
 <!--
 <div class="header_buttons">

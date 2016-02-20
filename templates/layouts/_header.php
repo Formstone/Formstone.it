@@ -106,7 +106,7 @@
 				<div class="fs-row">
 					<div class="fs-cell">
 						<?php include "../templates/layouts/_branding.php"; ?>
-						<span class="header_handle js-mobile_navigation_handle">Navigation</span>
+						<span class="header_handle js-mobile_navigation_handle icon-menu">Menu</span>
 					</div>
 				</div>
 			</header>
