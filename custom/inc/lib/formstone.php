@@ -168,6 +168,8 @@
 
 			return $data;
 		}
-	}
 
-?>
+		public function clearCache() {
+			BigTreeCMS::cacheDelete($this->CacheID, $this->CacheKey);
+		}
+	}

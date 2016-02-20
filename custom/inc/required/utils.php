@@ -168,4 +168,20 @@
 
 			return explode(" ", $return);
 		}
+
+		public static function clearCache() {
+			global $admin, $formstone;
+
+			if (!$formstone) {
+				$formstone = new Formstone;
+			}
+
+			$formstone->clearCache();
+
+			if (!$admin) {
+				$admin = new BigTreeAdmin;
+			}
+
+			$admin->clearCache();
+		}
 	}
