@@ -1,3 +1,8 @@
+<?php
+	if (!$formstone) {
+		$formstone = new Formstone;
+	}
+?>
 <div class="typography">
 
 	<header class="page_header js-scroll_lock" data-scroll-offset="55">
