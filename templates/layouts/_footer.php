@@ -30,10 +30,5 @@
 			<?php include "../templates/layouts/_navigation.php"; ?>
 		</div>
 
-		<!-- Grid Bookmarklet -->
-		<script>
-			(function(){if(typeof FSGridBookmarklet==='undefined'){document.body.appendChild(document.createElement('script')).src='//formstone.it/js/bookmarklet/grid.js';}else{FSGridBookmarklet();}})();
-		</script>
-
 	</body>
 </html>
