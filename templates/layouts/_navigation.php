@@ -18,15 +18,15 @@
 
 	$children = ob_get_clean();
 	$attr = '';
-	$class = '';
+	$class = ''; //' js-swap';
 
 	if ($open) {
 		$attr = ' data-swap-active="true"';
-		$class = ' fs-swap-active';
+		$class .= ' fs-swap-active';
 	}
 ?>
 <div class="nav_set js-nav_set_0<?=$class?>">
-	<h4 class="nav_heading js-swap<?=$class?>" data-swap-target=".js-nav_set_0"<?=$attr?>>About</h4>
+	<h4 class="nav_heading<?=$class?>" data-swap-target=".js-nav_set_0"<?=$attr?>>About</h4>
 	<div class="nav_children">
 		<?=$children?>
 	</div>
@@ -52,7 +52,7 @@
 
 		$children = ob_get_clean();
 		$attr = '';
-		$class = '';
+		$class .= ''; //' js-swap';
 
 		if ($open) {
 			$attr = ' data-swap-active="true"';
@@ -60,7 +60,7 @@
 		}
 ?>
 <div class="nav_set js-nav_set_<?=$i?><?=$class?>">
-	<h4 class="nav_heading js-swap<?=$class?>" data-swap-target=".js-nav_set_<?=$i?>"<?=$attr?>><?=$set["name"]?></h4>
+	<h4 class="nav_heading<?=$class?>" data-swap-target=".js-nav_set_<?=$i?>"<?=$attr?>><?=$set["name"]?></h4>
 	<div class="nav_children">
 		<?=$children?>
 	</div>

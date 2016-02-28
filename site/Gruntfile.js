@@ -197,7 +197,8 @@ module.exports = function(grunt) {
 		postcss: {
 			options: {
 				processors: [
-					require('autoprefixer')({browsers: ['> 1%', 'last 2 versions', 'Firefox ESR', 'Opera 12.1', 'ie >= 8']})
+					require('autoprefixer')({browsers: ['> 1%', 'last 2 versions', 'Firefox ESR', 'Opera 12.1', 'ie >= 8']}),
+					require('cssnano')
 				]
 			},
 			target: {

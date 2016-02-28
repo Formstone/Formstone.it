@@ -29,7 +29,8 @@
     "grunt-stripmq": "0.0.6",
     "grunt-svgmin": "^2.0.1",
     "less-plugin-clean-css": "^1.5.1",
-    "load-grunt-tasks": "^3.3.0"
+    "load-grunt-tasks": "^3.3.0",
+    "cssnano": "^3.5.2"
   },
   "css": {
     "css/site.css": "css/src/site.less",
@@ -38,7 +39,7 @@
   },
   "js": {
     "js/site.js": [
-	  "js/src/lib/utils.js",
+      "js/src/lib/utils.js",
       "bower/jquery/dist/jquery.min.js",
       "bower/picturefill/dist/picturefill.min.js",
       "formstone/dist/js/core.js",
@@ -68,7 +69,7 @@
       "js/src/modules/scroll.js"
     ],
     "js/site-prism.js": [
-	    "bower/prism/prism.js"
+      "bower/prism/prism.js"
     ],
     "js/site-ie8.js": [
       "bower/html5shiv/dist/html5shiv.min.js",
