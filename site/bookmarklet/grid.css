@@ -193,6 +193,12 @@
 		display: none;
 		opacity: 0.5;
 		overflow: hidden;
+		pointer-events: none;
+	}
+
+	#fs-grid-overlay,
+	#fs-grid-overlay * {
+		pointer-events: none !important;
 	}
 
 	#fs-grid-overlay .fs-row {
