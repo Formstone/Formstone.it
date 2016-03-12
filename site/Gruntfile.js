@@ -219,7 +219,7 @@ module.exports = function(grunt) {
 			},
 			target: {
 				files: {
-					'css/site-ie8.css': 'css/site-ie8.css'
+					// 'css/site-ie8-clean.css': 'css/site-ie8.css'
 				}
 			}
 		},
