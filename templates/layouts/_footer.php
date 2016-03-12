@@ -21,7 +21,7 @@
 				"theme"   => "",
 			);
 		?>
-		<div class="navigation js-mobile_navigation" data-navigation-handle=".js-mobile_navigation_handle" data-navigation-content=".js-mobile_navigation_content" data-navigation-options="<?=Utils::jsonAttribute($navigation_options)?>">
+		<div class="navigation js-mobile_navigation" data-navigation-handle=".js-mobile_navigation_handle" data-navigation-content=".js-mobile_navigation_content" data-navigation-options="<?=Utils::jsonAttribute($navigation_options)?>" data-analytics-open="mobile nav, open" data-analytics-close="mobile nav, close">
 
 			<div class="nav_header">
 				<?php include "../templates/layouts/_branding.php"; ?>
@@ -29,6 +29,9 @@
 
 			<?php include "../templates/layouts/_navigation.php"; ?>
 		</div>
+
+		<!-- Compiled JS -->
+		<script src="<?=WWW_ROOT?>js/site.js"></script>
 
 	</body>
 </html>

@@ -66,6 +66,7 @@
 	Header set X-Permitted-Cross-Domain-Policies "master-only"
 </IfModule>
 
+
 AddType image/svg+xml svg
 AddType video/ogg .ogv
 AddType video/mp4 .mp4

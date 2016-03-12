@@ -102,6 +102,7 @@
 
 				// $demo_link .= '<a href="' . WWW_ROOT . 'site/formstone/demo/components/' . $route . '.html" class="button" target="_blank">View Demo</a>';
 				$demo_link .= '<a href="' . $data["link"] . 'demo/" class="button" target="_blank">View Demo</a>';
+				// $demo_link .= '<span class="demo_alt"><a href="' . $data["link"] . 'demo/" target="_blank">View in New Window</a></span>';
 				// $demo_link .= $data["demo"];
 
 

@@ -300,7 +300,7 @@
 			padding: 60px 0 40px;
 		}
 
-		@media screen and (min-width 1500px) {
+		@media screen and (min-width: 1500px) {
 			background-position: right top;
 		}
 
@@ -773,3 +773,27 @@
 		}
 	}
 
+
+	.demo_alt {
+
+		@media @max_sm {
+			display: block;
+			margin: 0;
+			text-align: center;
+		}
+
+		@media @min_sm {
+			display: inline-block;
+			margin: 0 0 0 20px;
+		}
+
+		a {
+			.font_size(14);
+
+			color: @gray_400;
+
+			.no-touchevents &:hover {
+				color: @accent;
+			}
+		}
+	}
