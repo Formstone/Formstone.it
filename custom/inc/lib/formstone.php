@@ -14,10 +14,16 @@
 
 		var $Parsedown;
 
-		var $Debug = true;
+		var $Debug = false;
 
-		public function __construct() {
+		public function __construct($debug = false) {
 			global $cms;
+
+			$this->Debug = $debug;
+
+			if (!$this->Parsedown) {
+				$this->Parsedown = new Parsedown;
+			}
 
 			$this->PageLink = $cms->getLink(1);
 
@@ -27,8 +33,12 @@
 				$this->Package    = $cache["package"];
 				$this->Navigation = $cache["navigation"];
 				$this->Components = $cache["components"];
+				$this->Changelog  = $cache["changelog"];
 			} else {
-				$this->Package = json_decode(file_get_contents(SERVER_ROOT . "site/formstone/package.json"), true);
+				$this->Package   = json_decode(file_get_contents(SERVER_ROOT . "site/formstone/package.json"), true);
+
+				$changelog = explode("<!-- -->", $this->Parsedown->text(file_get_contents(SERVER_ROOT . "site/formstone/CHANGELOG.md")));
+				$this->Changelog = $changelog[1];
 
 				$index = json_decode(file_get_contents(SERVER_ROOT . "site/formstone/docs/json/index.json"), true);
 
@@ -54,10 +64,11 @@
 
 				$cache = $this->cleanRoots(array(
 					"navigation" => $this->Navigation,
-					"components" => $this->Components
+					"components" => $this->Components,
 				));
 
-				$cache["package"] = $this->Package;
+				$cache["package"]   = $this->Package;
+				$cache["changelog"] = $this->Changelog;
 
 				BigTreeCMS::cachePut($this->CacheID, $this->CacheKey, $cache);
 			}

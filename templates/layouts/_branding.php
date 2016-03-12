@@ -1,5 +1,11 @@
 <a href="<?=WWW_ROOT?>" class="header_logo icon-logo"><?=$formstone->Package["realname"]?></a>
-<span class="header_version">v<?=$formstone->Package["version"]?></span>
+<div class="header_meta">
+	v<?=$formstone->Package["version"]?>
+	<span>
+		&nbsp;&middot;&nbsp;
+		<a href="<?=WWW_ROOT?>changelog/">Changelog</a>
+	</span>
+</div>
 <!--
 <div class="header_buttons">
 	<a href="#" class="button button_white button_small">Download</a>
