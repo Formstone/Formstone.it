@@ -1,6 +1,9 @@
+<?php
+	$is_home = true;
+?>
 <div class="typography home">
-	<header class="page_header">
-		<div class="fs-row">
+	<header class="page_header js-scroll_lock" data-scroll-offset="52">
+		<div class="fs-row js-scroll_contents">
 			<div class="fs-cell">
 				<h1 class="page_heading home_heading">Formstone <span>is a collection<br>of front end components.</span></h1>
 			</div>
@@ -25,6 +28,6 @@
 				<p>Compiled with Grunt to ensure code quality and deployable with Bower to maintain simple implementation.</p>
 			</div>
 		</div>
-
+		<?php include "../templates/layouts/partials/callouts.php"; ?>
 	</div>
 </div>

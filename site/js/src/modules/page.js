@@ -57,13 +57,12 @@
 			Site.$body.find(".js-carousel").carousel();
 			Site.$body.find(".js-checkbox, .js-radio, input[type=checkbox], input[type=radio]").checkbox();
 			Site.$body.find(".js-dropdown").dropdown();
-			Site.$body.find(".js-equalize").equalize();
-
 			Site.$body.find("input[type=number]").number();
 			Site.$body.find("input[type=range]").range();
 			Site.$body.find(".js-tabs").tabs();
 			*/
 
+			Site.$body.find(".js-equalize").equalize();
 			Site.$body.find(".js-lightbox").lightbox();
 			Site.$body.find(".js-swap").swap();
 

@@ -1,4 +1,24 @@
-<!DOCTYPE html>
+<?php
+	$description  = "A Collection of Modular Front End Components.";
+
+	$social_image = WWW_ROOT . "images/social.jpg";
+
+	$site_title = $formstone->Package["realname"];
+	$page_title = array();
+
+	if ($local_title) {
+		$page_title[] = $local_title;
+	} else if ($page["title"] && !$is_home) {
+		$page_title[] = $page["title"];
+	}
+
+	if (!$is_home) {
+		$description = $site_title . " &middot; " . $description;
+	}
+
+	$page_title[] = $site_title;
+
+?><!DOCTYPE html>
 <html lang="en" class="no-js">
 	<head>
 		<meta charset="utf-8">
@@ -7,8 +27,8 @@
 		<meta name="mobile-web-app-capable" content="yes">
 
 		<!-- Page Attributes -->
-		<title><?=$formstone->Package["realname"]?></title>
-		<meta name="description" content="">
+		<title><?=implode(" &middot; ", $page_title)?></title>
+		<meta name="description" content="<?=$description?>">
 
 		<!-- Favions / Touch Icons -->
 		<link rel="apple-touch-icon" sizes="57x57" href="<?=WWW_ROOT?>images/favicons/apple-touch-icon-57x57.png">
@@ -30,26 +50,24 @@
 		<meta name="msapplication-TileColor" content="#da532c">
 		<meta name="msapplication-TileImage" content="<?=WWW_ROOT?>images/favicons/mstile-144x144.png">
 		<meta name="msapplication-config" content="<?=WWW_ROOT?>images/favicons/browserconfig.xml">
-		<meta name="theme-color" content="#00bcd4">
+		<meta name="theme-color" content="#455a64">
 
-		<? /*
 		<!-- G+ & Facebook -->
-		<meta property="og:title" content="">
-		<meta property="og:url" content="">
+		<meta property="og:title" content="<?=$page_title[0]?>">
+		<meta property="og:url" content="<?=BigTree::currentURL()?>">
 		<meta property="og:type" content="website">
-		<meta property="og:image" content="">
-		<meta property="og:description" content="">
-		<meta property="og:site_name" content="">
+		<meta property="og:image" content="<?=$social_image?>">
+		<meta property="og:description" content="<?=$description?>">
+		<meta property="og:site_name" content="<?=$site_title?>">
 
 		<!-- Twitter -->
 		<meta name="twitter:card" content="summary">
-		<meta name="twitter:site" content="@">
-		<meta name="twitter:creator" content="@">
-		<meta name="twitter:url" content="">
-		<meta name="twitter:title" content="">
-		<meta name="twitter:description" content="">
-		<meta name="twitter:image" content="">
-		*/ ?>
+		<meta name="twitter:site" content="@formstoneit">
+		<meta name="twitter:creator" content="@formstoneit">
+		<meta name="twitter:url" content="<?=WWW_ROOT?>">
+		<meta name="twitter:title" content="<?=implode(" &middot; ", $page_title)?>">
+		<meta name="twitter:description" content="<?=$description?>">
+		<meta name="twitter:image" content="<?=$social_image?>">
 
 		<!-- Modernizer -->
 		<script src="<?=WWW_ROOT?>js/modernizr.js"></script>
