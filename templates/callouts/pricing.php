@@ -3,7 +3,7 @@
 ?>
 <section class="pricing fs-row js-equalize" data-equalize-options='{"target":".js-equalize_child","minWidth":"500px"}'>
 	<header class="fs-cell pricing_header <?php if ($callout["home"] != "on") echo "visually_hide"; ?>">
-		<h2 class="pricing_heading">Licensing Formstone</h2>
+		<h2 class="pricing_heading">License Formstone</h2>
 	</header>
 	<article class="fs-cell fs-xs-full fs-sm-half fs-md-half fs-lg-half pricing_item">
 		<header class="pricing_item_header">

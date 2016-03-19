@@ -1,5 +1,9 @@
 <?php
 	$is_home = true;
+
+	if (!$parsedown) {
+		$parsedown = new Parsedown;
+	}
 ?>
 <div class="typography home">
 	<header class="page_header js-scroll_lock" data-scroll-offset="52">
@@ -10,6 +14,12 @@
 		</div>
 	</header>
 	<div class="page_content">
+		<div class="fs-row">
+			<div class="fs-cell page_intro">
+				<?=$parsedown->text($page_content)?>
+			</div>
+		</div>
+
 		<div class="fs-row">
 			<div class="fs-cell fs-md-half fs-lg-half home_feature">
 				<h2 class="icon_heading icon-extension">Modular</h2>
@@ -28,6 +38,28 @@
 				<p>Compiled with Grunt to ensure code quality and deployable with Bower to maintain simple implementation.</p>
 			</div>
 		</div>
+
+		<div class="fs-row">
+			<div class="fs-cell features">
+				<header class="features_header">
+					<h3 class="features_heading">Explore Formstone</h3>
+				</header>
+				<ul class="features_list">
+					<?php
+						foreach ($formstone->Navigation as $set) {
+							foreach ($set["children"] as $child) {
+					?>
+					<li>
+						<a class="" href="<?=$child["link"]?>"><?=$child["name"]?></a>
+					</li>
+					<?php
+							}
+						}
+					?>
+				</ul>
+			</div>
+		</div>
+
 		<?php include "../templates/layouts/partials/callouts.php"; ?>
 	</div>
 </div>

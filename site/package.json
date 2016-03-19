@@ -35,7 +35,8 @@
   "css": {
     "css/site.css": "css/src/site.less",
     "css/site-ie8.css": "css/src/ie/ie8.less",
-    "css/site-ie9.css": "css/src/ie/ie9.less"
+    "css/site-ie9.css": "css/src/ie/ie9.less",
+    "css/demo.css": "css/src/demo.less"
   },
   "js": {
     "js/site.js": [
