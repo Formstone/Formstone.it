@@ -158,6 +158,8 @@
 */
 
 		function trackEvent(data) {
+			console.log($.type(data));
+
 			if ($.type(data) === "string") {
 				data = data.split(",");
 

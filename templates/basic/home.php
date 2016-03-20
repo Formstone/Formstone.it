@@ -16,7 +16,11 @@
 	<div class="page_content">
 		<div class="fs-row">
 			<div class="fs-cell page_intro">
-				<?=$parsedown->text($page_content)?>
+				<div class="fs-row">
+					<div class="fs-cell fs-xl-11">
+						<?=$parsedown->text($page_content)?>
+					</div>
+				</div>
 			</div>
 		</div>
 
