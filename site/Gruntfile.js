@@ -137,8 +137,8 @@ module.exports = function(grunt) {
 		uglify: {
 			options: {
 				banner: '<%= meta.banner %>',
-				report: 'min',
-				sourceMap: true
+				report: 'min'
+				// sourceMap: true
 			},
 			target: {
 				files: '<%= pkg.js %>'
@@ -147,7 +147,7 @@ module.exports = function(grunt) {
 		// Concat - For development
 		concat: {
 			options: {
-				sourceMap: true
+				// sourceMap: true
 			},
 			target: {
 				files: '<%= pkg.js %>'
@@ -180,8 +180,8 @@ module.exports = function(grunt) {
 			},
 			target: {
 				options: {
-					sourceMapFileInline: true,
-					sourceMap: true
+					// sourceMapFileInline: true,
+					// sourceMap: true
 				},
 				files: '<%= pkg.css %>'
 			},
@@ -203,7 +203,7 @@ module.exports = function(grunt) {
 			},
 			target: {
 				options: {
-					map: true
+					// map: true
 				},
 				src: 'css/*.css'
 			},

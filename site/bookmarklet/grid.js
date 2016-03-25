@@ -1,7 +1,7 @@
 /*
  * Grid Overlay Bookmarklet <https://formstone.it/grid>
  * @author Ben Plum
- * @version 1.2.0
+ * @version 1.2.1
  *
  * Copyright 2016 Ben Plum <mr@benplum.co>
  */
@@ -137,7 +137,7 @@ function FSGridBookmarklet() {
 		var jQ = document.createElement("script");
 
 		jQ.id = "grid-jquery";
-		jQ.src = "http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js";
+		jQ.src = "//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js";
 		jQ.onload = function() {
 			$jq = jQuery.noConflict(true);
 			initOverlay();
