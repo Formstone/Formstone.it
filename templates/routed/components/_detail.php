@@ -8,11 +8,18 @@
 	}
 
 	if ($isDemo && $component["demo_html"]) {
-		echo($component["demo_html"]);
-		die();
-	}
+		$js_header = file_get_contents(SERVER_ROOT . "templates/layouts/partials/js-header.php");
+		$js_footer = file_get_contents(SERVER_ROOT . "templates/layouts/partials/js-footer.php");
 
-	$local_title = strip_tags($component["name"]);
+		$output = $component["demo_html"];
+		$output = str_ireplace("<!-- JSHEADER -->", $js_header, $output);
+		$output = str_ireplace("<!-- JSFOOTER -->", $js_footer.'<br clear="both">', $output);
+
+		$bigtree["layout"] = "empty";
+		echo $output;
+	} else {
+
+		$local_title = strip_tags($component["name"]);
 ?>
 <div class="typography">
 	<header class="page_header js-scroll_lock" data-scroll-offset="52">
@@ -33,3 +40,6 @@
 		</div>
 	</div>
 </div>
+<?php
+	}
+?>

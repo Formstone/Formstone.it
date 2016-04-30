@@ -109,27 +109,7 @@
 	</head>
 	<body class="fs-grid fs-grid-fluid">
 
-		<!-- Google Tag Manager -->
-		<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-T4HSP3"
-		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-		'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-		})(window,document,'script','dataLayer','GTM-T4HSP3');</script>
-		<!-- End Google Tag Manager -->
-
-		<!-- BuySellAds -->
-		<script type="text/javascript">
-		(function(){
-			var bsa = document.createElement('script');
-			bsa.type = 'text/javascript';
-			bsa.async = true;
-			bsa.src = '//s3.buysellads.com/ac/bsa.js';
-			(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
-		})();
-		</script>
-		<!-- End BuySellAds -->
+		<?php include "../templates/layouts/partials/js-header.php"; ?>
 
 		<a href="#page" id="skip_to_content" class="offscreen">Skip to Main Content</a>
 

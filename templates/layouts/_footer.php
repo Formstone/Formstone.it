@@ -6,9 +6,7 @@
 						<p class="footer_copyright">&copy; <?=date("Y")?> <?=$formstone->Package["formstone"]?></p>
 					</div>
 					<div class="fs-cell fs-md-half fs-lg-half footer_ads">
-						<!-- BuySellAds Zone -->
-						<div id="bsap_1296027" class="bsarocks bsap_c5d0dbd4698a2fc9419d663ba33e37cb"></div>
-						<!-- End BuySellAds Zone -->
+						<?php include "../templates/layouts/partials/js-footer.php"; ?>
 					</div>
 				</div>
 			</footer>
