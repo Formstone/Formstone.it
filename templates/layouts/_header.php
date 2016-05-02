@@ -3,6 +3,10 @@
 
 	$social_image = WWW_ROOT . "images/social.jpg";
 
+	if ($local_image) {
+		$social_image = $local_image;
+	}
+
 	$site_title = $formstone->Package["realname"];
 	$page_title = array();
 

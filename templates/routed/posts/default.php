@@ -12,7 +12,7 @@
 			<div class="fs-cell">
 				<h1 class="page_heading"><?=$page_header?></h1>
 				<div class="page_intro">
-					Blog time!
+					<p>Tutorials, updates, and more.</p>
 				</div>
 			</div>
 		</div>
@@ -24,11 +24,19 @@
 					foreach ($posts as $post) {
 				?>
 				<div class="post_listing">
-					<h2 class="post_heading">
-						<a href="<?=$post["link"]?>"><?=$post["title"]?></a>
-					</h2>
-					<time class="post_date"><?=date("F j, Y", strtotime($post["date"]))?></time>
-					<p class="post_intro"><?=$post["intro"]?></p>
+					<div class="post_image responsive_image">
+						<img src="<?=$post["cover"]?>" alt="">
+					</div>
+					<div class="post_wrapper">
+						<h2 class="post_heading">
+							<a href="<?=$post["link"]?>"><?=$post["title"]?></a>
+						</h2>
+						<span class="post_meta">
+							<time><?=date("F j, Y", strtotime($post["date"]))?></time> by Ben Plum
+						</span>
+						<p class="post_intro"><?=$post["intro"]?></p>
+						<a href="<?=$post["link"]?>" class="button button_small">Read More</a>
+					</div>
 				</div>
 				<?php
 					}
