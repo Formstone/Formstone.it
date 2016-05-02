@@ -118,7 +118,8 @@
 
 		.page_intro {
 
-			p {
+			p,
+			time {
 				.sans;
 				.font_size(18);
 
@@ -657,6 +658,54 @@
 				&:before {
 					display: none;
 				}
+			}
+		}
+	}
+
+
+	.post_listing {
+		border-bottom: 1px solid @gray_50;
+		margin: 0 0 30px;
+		padding: 0 0 30px;
+
+		@media @min_md {
+			margin: 0 0 40px;
+			padding: 0 0 40px;
+		}
+
+		.post_heading {
+			margin-top: 0;
+		}
+
+		.post_meta {
+			.font_size(14);
+
+			color: @gray_400;
+			display: block;
+		}
+
+		.post_intro {}
+
+		.post_wrapper {
+
+			@media @min_sm {
+				.contain;
+			}
+		}
+
+		.post_image {
+			margin: 0 0 20px;
+
+			// @media @min_sm {
+				width: 30%;
+
+				float: right;
+				margin: 5px 0 20px 20px;
+			// }
+
+			@media @min_lg {
+				float: left;
+				margin: 5px 30px 20px 0;
 			}
 		}
 	}

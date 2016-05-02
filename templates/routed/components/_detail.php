@@ -34,7 +34,7 @@
 	</header>
 	<div class="page_content">
 		<div class="fs-row">
-			<div class="fs-cell">
+			<div class="fs-cell fs-xl-11">
 				<?=$component["content"]?>
 			</div>
 		</div>
