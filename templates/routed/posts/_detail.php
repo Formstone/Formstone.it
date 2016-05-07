@@ -7,6 +7,7 @@
 
 	$local_title = $post["title"];
 	$local_image = $post["cover"];
+	$local_description = $post["intro"];
 ?>
 <div class="typography">
 	<header class="page_header js-scroll_lock" data-scroll-offset="52">
@@ -15,7 +16,7 @@
 				<h1 class="page_heading"><?=$post["title"]?></h1>
 				<div class="page_intro">
 					<p>
-						<?=date("F j, Y", strtotime($post["date"]))?> by Ben Plum
+						<?=date("F j, Y", strtotime($post["date"]))?>
 					</p>
 				</div>
 			</div>

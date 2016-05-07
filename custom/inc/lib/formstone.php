@@ -33,9 +33,13 @@
 				$this->Package    = $cache["package"];
 				$this->Navigation = $cache["navigation"];
 				$this->Components = $cache["components"];
+				$this->Badges     = $cache["badges"];
 				$this->Changelog  = $cache["changelog"];
 			} else {
-				$this->Package   = json_decode(file_get_contents(SERVER_ROOT . "site/formstone/package.json"), true);
+				$this->Package = json_decode(file_get_contents(SERVER_ROOT . "site/formstone/package.json"), true);
+
+				$readme = explode("# Formstone", file_get_contents(SERVER_ROOT . "site/formstone/README.md"));
+				$this->Badges = $readme[0];
 
 				$changelog = explode("<!-- -->", $this->Parsedown->text(file_get_contents(SERVER_ROOT . "site/formstone/CHANGELOG.md")));
 				$this->Changelog = $changelog[1];
@@ -68,6 +72,7 @@
 				));
 
 				$cache["package"]   = $this->Package;
+				$cache["badges"] = $this->Badges;
 				$cache["changelog"] = $this->Changelog;
 
 				BigTreeCMS::cachePut($this->CacheID, $this->CacheKey, $cache);

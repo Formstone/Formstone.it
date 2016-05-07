@@ -20,6 +20,10 @@
 		$description = $site_title . " &middot; " . $description;
 	}
 
+	if ($local_description) {
+		$description = $local_description;
+	}
+
 	$page_title[] = $site_title;
 
 ?><!DOCTYPE html>
@@ -69,7 +73,7 @@
 		<meta name="twitter:site" content="@formstoneit">
 		<meta name="twitter:creator" content="@formstoneit">
 		<meta name="twitter:url" content="<?=WWW_ROOT?>">
-		<meta name="twitter:title" content="<?=implode(" &middot; ", $page_title)?>">
+		<meta name="twitter:title" content="<?=$page_title[0]?>">
 		<meta name="twitter:description" content="<?=$description?>">
 		<meta name="twitter:image" content="<?=$social_image?>">
 

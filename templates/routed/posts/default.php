@@ -32,7 +32,7 @@
 							<a href="<?=$post["link"]?>"><?=$post["title"]?></a>
 						</h2>
 						<span class="post_meta">
-							<time><?=date("F j, Y", strtotime($post["date"]))?></time> by Ben Plum
+							<time><?=date("F j, Y", strtotime($post["date"]))?></time>
 						</span>
 						<p class="post_intro"><?=$post["intro"]?></p>
 						<a href="<?=$post["link"]?>" class="button button_small">Read More</a>
