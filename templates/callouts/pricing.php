@@ -17,7 +17,7 @@
 					<li>Future updates</li>
 				</ul>
 			</div>
-			<p class="pricing_item_price"><span>$50</span> $35<small>*</small></p>
+			<p class="pricing_item_price">$50</p>
 			<a href="http://www.site.uplabs.com/posts/formstone" class="button pricing_button" target="_blank">Purchase Single</a>
 		</div>
 	</article>
@@ -34,14 +34,11 @@
 					<li>Future updates</li>
 				</ul>
 			</div>
-			<p class="pricing_item_price"><span>$200</span> $140<small>*</small></p>
+			<p class="pricing_item_price">$200</p>
 			<a href="http://www.site.uplabs.com/posts/formstone" class="button pricing_button" target="_blank">Purchase Extended</a>
 		</div>
 	</article>
 	<footer class="fs-cell pricing_footer">
-		<p>
-			*Represents a 30% introductory discount.
-		</p>
 		<?php if ($callout["home"] == "on") { ?>
 		<p>
 			Formstone is licensed under the GNU GPL v3 for all open source applications. A commercial license is required for all commercial applications. Read more about <a href="<?=WWW_ROOT?>license/">Formstone's license</a>.
