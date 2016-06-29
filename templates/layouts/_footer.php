@@ -8,7 +8,7 @@
 						</div>
 						<p class="footer_copyright">&copy; <?=date("Y")?> <?=$formstone->Package["formstone"]?></p>
 					</div>
-					<div class="fs-cell fs-md-half fs-lg-half footer_ads">
+					<div class="fs-cell fs-md-half fs-lg-half footer_friends">
 						<?php include "../templates/layouts/partials/js-footer.php"; ?>
 					</div>
 				</div>

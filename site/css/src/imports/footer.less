@@ -6,16 +6,27 @@
 		background: @gray_50;
 		padding: 50px 0;
 
-		.footer_ads {
+		.footer_friends {
 			text-align: center;
 
 			@media @min_md {
 				text-align: right;
 			}
 
+			> div {
+				width: 125px;
+				height: 125px;
+
+				background: #ddd;
+				display: inline-block;
+				margin: 0 5px;
+				vertical-align: top;
+			}
+
 			a {
 				display: inline-block;
 				float: none;
+				margin: 0;
 
 				&.adhere {
 					width: 125px;
