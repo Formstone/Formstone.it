@@ -75,6 +75,38 @@
 	}
 
 
+	.content_friends {
+		float: right;
+		margin: 20px 0 20px 20px;
+		text-align: right;
+
+		@media @min_md {
+			margin: 20px 0 30px 30px;
+		}
+
+		> div {
+			width: 125px;
+			height: 125px;
+
+			background: #eee;
+			display: block;
+			margin: 0;
+			vertical-align: top;
+		}
+
+		a {
+			display: block;
+			float: none;
+			margin: 0;
+
+			&.adhere {
+				width: 125px;
+				height: 125px;
+			}
+		}
+	}
+
+
 	.page_header {
 		background: @accent;
 
