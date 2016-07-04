@@ -31,8 +31,5 @@
 			<?php include "../templates/layouts/_navigation.php"; ?>
 		</div>
 
-		<!-- Compiled JS -->
-		<script src="<?=WWW_ROOT?>js/site.js"></script>
-
 	</body>
 </html>

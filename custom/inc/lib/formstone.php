@@ -101,16 +101,25 @@
 			}
 
 			if ($data["demo_html"]) {
+
+				if (strpos($data["demo_html"], "<!-- START: FIRSTDEMO -->") !== false) {
+					$demo_parts = explode('<!-- START: FIRSTDEMO -->', $data["demo_html"]);
+					$demo_parts = explode('<!-- END: FIRSTDEMO -->', $demo_parts[1]);
+					$data["demo_first"] = $demo_parts[0];
+				}
+
 				$use_link   = '<li><a href="#demo">Demo</a></li>' . $use_link;
 				$demo_link .= '<h2><a name="demo"></a> Demo</h2>';
 				$demo_link .= '<p>Demos are largely unstyled to give developers a better idea of how the plugin can drop into a new or existing project.</p>';
 
-				// $demo_link .= '<a href="' . WWW_ROOT . 'site/formstone/demo/components/' . $route . '.html" class="button" target="_blank">View Demo</a>';
-				$demo_link .= '<a href="' . $data["link"] . 'demo/" class="button" target="_blank">View Demo</a>';
-				// $demo_link .= '<span class="demo_alt"><a href="' . $data["link"] . 'demo/" target="_blank">View in New Window</a></span>';
-				// $demo_link .= $data["demo"];
-
-
+				if ($data["demo_first"]) {
+					$demo_link .= '<div class="demo_content">';
+					$demo_link .= $data["demo_first"];
+					$demo_link .= '</div>';
+					$demo_link .= '<a href="' . $data["link"] . 'demo/" class="button" target="_blank">View All Demos</a>';
+				} else {
+					$demo_link .= '<a href="' . $data["link"] . 'demo/" class="button" target="_blank">View Demo</a>';
+				}
 			}
 
 			$search = array(

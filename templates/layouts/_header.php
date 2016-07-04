@@ -78,33 +78,24 @@
 		<meta name="twitter:image" content="<?=$social_image?>">
 
 		<!-- Modernizer -->
-		<?php /* <script src="<?=WWW_ROOT?>js/modernizr.js"></script> */ ?>
-		<script><?php
-			echo file_get_contents(SERVER_ROOT . "site/js/modernizr.js");
-		?></script>
+		<script src="<?=WWW_ROOT?>js/modernizr.js"></script>
 
 		<!-- Fonts -->
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:Fira+Mono">
 
 		<!--[if gt IE 8]><!-->
-			<?php /*
+			<link rel="stylesheet" href="<?=WWW_ROOT?>formstone/demo/css/demo.css">
 			<link rel="stylesheet" href="<?=WWW_ROOT?>css/site.css">
+
+			<script src="<?=WWW_ROOT?>js/site.js"></script>
+			<script src="<?=WWW_ROOT?>formstone/demo/js/demo.js"></script>
 			<script src="<?=WWW_ROOT?>js/site-prism.js"></script>
-			*/ ?>
-			<style><?php
-				echo str_ireplace("../", WWW_ROOT, file_get_contents(SERVER_ROOT . "site/css/site.css"));
-			?></style>
-			<script><?php
-				echo file_get_contents(SERVER_ROOT . "site/js/site-prism.js");
-			?></script>
 		<!--<![endif]-->
 
 		<!--[if IE 8]>
 			<script>var IE8 = true;</script>
-			<?php /*
 			<script src="<?=WWW_ROOT?>js/site-ie8.js"></script>
 			<link rel="stylesheet" href="<?=WWW_ROOT?>css/site-ie8.css">
-			*/ ?>
 		<![endif]-->
 		<!--[if IE 9]>
 			<script>var IE9 = true;</script>

@@ -8,34 +8,15 @@
 
 		function init() {
 
-			/* Plugin Defaults */
-
-/*
-			$.lightbox("defaults", {
-				mobile: true
-			});
-*/
-
-
-			/* Picturefill */
-
 			picturefill();
-
-			/* Analytics */
 
 			$.analytics({
 				scrollDepth: true
 			});
 
-
-			/* Mobile Main Navigation */
-
 			Site.$body.find(".js-mobile_navigation").navigation({
 				maxWidth: "979px"
 			});
-
-
-			/* Mobile Subnavigation */
 
 			Site.$body.find(".js-navigation")
 				.navigation({
@@ -47,54 +28,12 @@
 					trackEvent( $(this).data("analytics-close") );
 				});
 
-
-			/* Plugins
-
-			Site.$body.find(".js-background").background();
-			Site.$body.find(".js-carousel").carousel();
-			Site.$body.find(".js-checkbox, .js-radio, input[type=checkbox], input[type=radio]").checkbox();
-			Site.$body.find(".js-dropdown").dropdown();
-			Site.$body.find(".js-lightbox").lightbox();
-			Site.$body.find("input[type=number]").number();
-			Site.$body.find("input[type=range]").range();
-			Site.$body.find(".js-swap").swap();
-			Site.$body.find(".js-tabs").tabs();
-			*/
-
-			Site.$body.find(".js-equalize").equalize();
-
-			/* Wrapper for Tables */
-
 			Site.$body.find("table").wrap('<div class="table_wrapper"></div>');
-
-			/* Generic Toggles */
-
-/*
-			Site.$body.find(".js-toggle")
-				.not(".js-bound")
-				.on("click", ".js-toggle_handle", onToggleClick)
-				.addClass("js-bound");
-*/
-
-
-			/* Scroll Nav */
 
 			Site.$body.find(".js-scroll_to")
 				.not(".js-bound")
 				.on("click", onScrollTo)
 				.addClass("js-bound");
-
-
-			/* Responsive Video */
-
-/*
-			$("iframe[src*='vimeo.com'], iframe[src*='youtube.com']", ".typography").each(function() {
-				$(this).wrap('<div class="video_frame"></div>');
-			});
-*/
-
-
-			/* Scrolling */
 
 			Site.onScroll.push(scroll);
 			Site.onResize.push(resize);
@@ -141,21 +80,6 @@
 		function scrollToPosition(top) {
 			$("html, body").animate({ scrollTop: top });
 		}
-
-/*
-		function onToggleClick(e) {
-			Site.killEvent(e);
-
-			var $target     = $(e.delegateTarget),
-				activeClass = "js-toggle_active";
-
-			if ($target.hasClass(activeClass)) {
-				$target.removeClass(activeClass);
-			} else {
-				$target.addClass(activeClass);
-			}
-		}
-*/
 
 		function trackEvent(data) {
 			console.log($.type(data));
