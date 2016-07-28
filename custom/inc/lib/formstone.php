@@ -93,7 +93,8 @@
 
 
 			$use_link  = '<li><a href="#use">Use</a></li>';
-			$demo_link = file_get_contents(SERVER_ROOT . "templates/layouts/partials/ads.php");
+			$demo_link = '';
+			$ad_block = file_get_contents(SERVER_ROOT . "templates/layouts/partials/ads.php");
 
 			$data["demo_html"] = str_ireplace(array("../"), array(WWW_ROOT . "demo/"), file_get_contents(SERVER_ROOT . "site/formstone/demo/components/" . $route . ".html"));
 
@@ -122,6 +123,8 @@
 					$demo_link .= '<a href="' . $data["link"] . 'demo/" class="button" target="_blank">View Demo</a>';
 				}
 			}
+
+			$demo_link .= $ad_block;
 
 			$search = array(
 				'<!-- NAV START -->',

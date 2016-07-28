@@ -25,25 +25,28 @@
 	<div class="page_content">
 		<div class="fs-row">
 			<div class="fs-cell fs-xl-11">
-				<?php include "../templates/layouts/partials/ads.php"; ?>
+				<?php
+					$content = $parsedown->text($post["content"]);
+					$parts = Utils::splitFirstPP($content);
 
-				<?=$parsedown->text($post["content"])?>
-
+					echo $parts[0];
+					include "../templates/layouts/partials/ads.php";
+					echo $parts[1];
+				?>
 				<hr>
-
 				<h2>Comments</h2>
 				<div id="disqus_thread" class="margined_lg_bottom"></div>
 				<script>
-				var disqus_config = function () {
-					this.page.url = "<?=$post["link"]?>";
-					this.page.identifier = "post-<?=$post["id"]?>";
-				};
-				(function() {
-					var d = document, s = d.createElement('script');
-					s.src = '//formstone.disqus.com/embed.js';
-					s.setAttribute('data-timestamp', +new Date());
-					(d.head || d.body).appendChild(s);
-				})();
+					var disqus_config = function () {
+						this.page.url = "<?=$post["link"]?>";
+						this.page.identifier = "post-<?=$post["id"]?>";
+					};
+					(function() {
+						var d = document, s = d.createElement('script');
+						s.src = '//formstone.disqus.com/embed.js';
+						s.setAttribute('data-timestamp', +new Date());
+						(d.head || d.body).appendChild(s);
+					})();
 				</script>
 			</div>
 		</div>

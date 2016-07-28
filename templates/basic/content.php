@@ -9,7 +9,7 @@
 			<div class="fs-cell">
 				<h1 class="page_heading"><?=$page_header?></h1>
 				<div class="page_intro">
-					<?=$component["description"]?>
+					<? // $component["description"] ?>
 				</div>
 			</div>
 		</div>
@@ -17,9 +17,14 @@
 	<div class="page_content">
 		<div class="fs-row">
 			<div class="fs-cell">
-				<?php include "../templates/layouts/partials/ads.php"; ?>
+				<?php
+					$content = $parsedown->text($page_content);
+					$parts = Utils::splitFirstPP($content);
 
-				<?=$parsedown->text($page_content)?>
+					echo $parts[0];
+					include "../templates/layouts/partials/ads.php";
+					echo $parts[1];
+				?>
 			</div>
 		</div>
 		<?php include "../templates/layouts/partials/callouts.php"; ?>

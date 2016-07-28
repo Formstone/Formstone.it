@@ -75,18 +75,148 @@
 	}
 
 
-	.content_friends {
-		background: #eee;
-		border-radius: 3px;
-		float: right;
-		margin: 20px 0 20px 20px;
-		padding: 10px;
-		text-align: right;
+	body {
 
-		@media @min_md {
-			margin: 20px 0 30px 30px;
+		.page_row {
+
+			@media @min_lg {
+				position: relative;
+			}
 		}
 
+		.content_friends {
+			.sans;
+			.font_size(14);
+
+			max-width: 400px;
+
+			border: 1px solid @gray_100;
+			border-radius: 3px;
+			background: transparent;
+			margin: 25px 0;
+			padding: 10px;
+
+			a {
+				color: @primary_dark;
+			}
+
+			@media @min_sm {
+				margin: 30px 0;
+				padding: 20px;
+			}
+
+/*
+			@media @min_lg {
+				width: 170px;
+
+				position: absolute;
+				top: 0;
+				right: 0;
+
+				margin: 20px 0 0;
+			}
+*/
+
+			// BSA
+
+			.bsa_it_ad {
+				.font_size(12);
+
+				background: transparent;
+				border: none;
+				padding: 0;
+
+				.bsa_it_t {
+					.sans;
+					.font_size(14);
+
+					color: @primary_dark;
+					font-weight: bold;
+					line-height: 1.3;
+					padding-top: 5px;
+
+					@media @min_sm {
+						padding-top: 10px;
+					}
+				}
+
+				.bsa_it_d {
+					.sans;
+					.font_size(12);
+
+					color: @primary_dark;
+					line-height: 1.3;
+				}
+
+				.bsa_it_i {
+					margin: 0 15px 0 0;
+
+/*
+					@media @min_lg {
+						margin: 0 0 15px;
+					}
+*/
+				}
+			}
+
+			.bsa_it_p {
+				.font_size(14);
+
+				bottom: 0;
+				right: 5px;
+
+				a {
+					color: @primary;
+				}
+			}
+
+			// Carbon
+
+			#carbonads {
+				position: relative;
+			}
+
+			.carbon-wrap {
+				.sans;
+				.clearfix;
+
+				vertical-align: top;
+
+				a {
+					display: block;
+				}
+
+				.carbon-text {
+					.font_size(14);
+
+					font-weight: bold;
+					line-height: 1.3;
+					padding-top: 5px;
+
+					@media @min_sm {
+						padding-top: 10px;
+					}
+				}
+
+				.carbon-img {
+					float: left;
+					margin: 0 15px 0 0;
+				}
+			}
+
+			.carbon-poweredby {
+				.font_size(10);
+
+				position: absolute;
+				bottom: 0;
+				right: 5px;
+
+				color: @primary;
+			}
+		}
+	}
+
+/*
 		> div {
 			width: 125px;
 			height: 125px;
@@ -128,9 +258,10 @@
 				margin: 0 auto 40px;
 			}
 		}
-	}
+*/
 
 	.blog_landing_friends {
+/*
 		border-bottom: 1px solid @gray_50;
 		clear: both;
 		margin: 0 0 30px;
@@ -139,6 +270,7 @@
 		@media @min_md {
 			margin: 0 0 40px;
 		}
+*/
 	}
 
 

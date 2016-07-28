@@ -38,13 +38,13 @@
 			<a href="http://www.site.uplabs.com/posts/formstone" class="button pricing_button" target="_blank">Purchase Extended</a>
 		</div>
 	</article>
+	<?php if ($callout["home"] == "on") { ?>
 	<footer class="fs-cell pricing_footer">
-		<?php if ($callout["home"] == "on") { ?>
 		<p>
 			Formstone is licensed under the GNU GPL v3 for all open source applications. A commercial license is required for all commercial applications. Read more about <a href="<?=WWW_ROOT?>license/">Formstone's license</a>.
 		</p>
-		<?php } ?>
 	</footer>
+	<?php } ?>
 </section>
 <?php
 	// }

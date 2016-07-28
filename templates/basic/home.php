@@ -18,9 +18,14 @@
 			<div class="fs-cell page_intro">
 				<div class="fs-row">
 					<div class="fs-cell">
-						<?php include "../templates/layouts/partials/ads.php"; ?>
+						<?php
+							$content = $parsedown->text($page_content);
+							$parts = Utils::splitFirstPP($content);
 
-						<?=$parsedown->text($page_content)?>
+							echo $parts[0];
+							include "../templates/layouts/partials/ads.php";
+							echo $parts[1];
+						?>
 					</div>
 				</div>
 			</div>
