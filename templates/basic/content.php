@@ -17,6 +17,8 @@
 	<div class="page_content">
 		<div class="fs-row">
 			<div class="fs-cell">
+				<?php include "../templates/layouts/partials/ads.php"; ?>
+
 				<?=$parsedown->text($page_content)?>
 			</div>
 		</div>

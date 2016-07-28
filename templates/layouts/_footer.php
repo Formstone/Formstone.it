@@ -1,15 +1,12 @@
 			<footer id="footer" class="footer" role="contentinfo">
 				<div class="fs-row">
-					<div class="fs-cell fs-md-half fs-lg-half footer_meta">
+					<div class="fs-cell footer_meta">
 						<a href="<?=$formstone->Package["repository"]["url"]?>" class="footer_link icon_link icon-github">GitHub</a>
 						<a href="https://twitter.com/FormstoneIt" class="footer_link icon_link icon-twitter">Twitter</a>
 						<div class="footer_badges margined">
 							<?=$formstone->Badges?>
 						</div>
 						<p class="footer_copyright">&copy; <?=date("Y")?> <?=$formstone->Package["formstone"]?></p>
-					</div>
-					<div class="fs-cell fs-md-half fs-lg-half footer_friends">
-						<?php include "../templates/layouts/partials/js-footer.php"; ?>
 					</div>
 				</div>
 			</footer>

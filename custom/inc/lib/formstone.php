@@ -91,8 +91,9 @@
 			$nav_end   .= '</div>';
 			$nav_end   .= '</div>';
 
+
 			$use_link  = '<li><a href="#use">Use</a></li>';
-			$demo_link = '';
+			$demo_link = file_get_contents(SERVER_ROOT . "templates/layouts/partials/ads.php");
 
 			$data["demo_html"] = str_ireplace(array("../"), array(WWW_ROOT . "demo/"), file_get_contents(SERVER_ROOT . "site/formstone/demo/components/" . $route . ".html"));
 
@@ -113,7 +114,7 @@
 				$demo_link .= '<p>Demos are largely unstyled to give developers a better idea of how the plugin can drop into a new or existing project.</p>';
 
 				if ($data["demo_first"]) {
-					$demo_link .= '<div class="demo_content">';
+					$demo_link .= '<div class="demo_content clear">';
 					$demo_link .= $data["demo_first"];
 					$demo_link .= '</div>';
 					$demo_link .= '<a href="' . $data["link"] . 'demo/" class="button" target="_blank">View All Demos</a>';

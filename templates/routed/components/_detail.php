@@ -32,9 +32,11 @@
 			</div>
 		</div>
 	</header>
-	<div class="page_content">
+	<div class="page_content page_content_component">
 		<div class="fs-row">
 			<div class="fs-cell fs-xl-11">
+				<?php // include "../templates/layouts/partials/ads.php"; ?>
+
 				<?=$component["content"]?>
 			</div>
 		</div>

@@ -76,8 +76,11 @@
 
 
 	.content_friends {
+		background: #eee;
+		border-radius: 3px;
 		float: right;
 		margin: 20px 0 20px 20px;
+		padding: 10px;
 		text-align: right;
 
 		@media @min_md {
@@ -88,21 +91,53 @@
 			width: 125px;
 			height: 125px;
 
-			background: #eee;
 			display: block;
 			margin: 0;
 			vertical-align: top;
 		}
 
+		img {
+			display: block;
+		}
+
 		a {
 			display: block;
 			float: none;
-			margin: 0;
+			margin: 0 !important;
 
 			&.adhere {
 				width: 125px;
 				height: 125px;
 			}
+		}
+
+		.page_content_component & {
+
+			@media @min_lg {
+				margin-top: 0;
+			}
+		}
+
+		.blog_landing_friends & {
+			width: 145px;
+
+			float: none;
+			margin: 0 auto 30px;
+
+			@media @min_md {
+				margin: 0 auto 40px;
+			}
+		}
+	}
+
+	.blog_landing_friends {
+		border-bottom: 1px solid @gray_50;
+		clear: both;
+		margin: 0 0 30px;
+		overflow: hidden;
+
+		@media @min_md {
+			margin: 0 0 40px;
 		}
 	}
 

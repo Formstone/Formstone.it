@@ -25,14 +25,7 @@
 	<div class="page_content">
 		<div class="fs-row">
 			<div class="fs-cell fs-xl-11">
-
-				<div class="content_friends">
-
-					<!-- BuySellAds Zone Code -->
-					<div id="bsap_1305694" class="bsarocks bsap_c5d0dbd4698a2fc9419d663ba33e37cb"></div>
-					<!-- End BuySellAds Zone Code -->
-
-				</div>
+				<?php include "../templates/layouts/partials/ads.php"; ?>
 
 				<?=$parsedown->text($post["content"])?>
 

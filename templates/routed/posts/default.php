@@ -20,8 +20,16 @@
 	<div class="page_content">
 		<div class="fs-row">
 			<div class="fs-cell fs-xl-11">
+
 				<?php
+					$i = 0;
 					foreach ($posts as $post) {
+						$i++;
+						if ($i == 2) {
+							echo '<div class="blog_landing_friends">';
+							include "../templates/layouts/partials/ads.php";
+							echo '</div>';
+						}
 				?>
 				<div class="post_listing">
 					<div class="post_image responsive_image">
