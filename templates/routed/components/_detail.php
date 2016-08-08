@@ -34,9 +34,12 @@
 	</header>
 	<div class="page_content page_content_component">
 		<div class="fs-row">
-			<div class="fs-cell fs-xl-11">
-				<?php // include "../templates/layouts/partials/ads.php"; ?>
-
+			<div class="fs-cell fs-lg-9 fs-xl-10">
+				<?=$component["nav"]?>
+			</div>
+		</div>
+		<div class="fs-row page_row">
+			<div class="fs-cell fs-lg-9 fs-xl-10">
 				<?=$component["content"]?>
 			</div>
 		</div>

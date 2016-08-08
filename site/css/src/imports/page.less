@@ -88,17 +88,33 @@
 			.sans;
 			.font_size(14);
 
-			max-width: 400px;
+			max-width: 420px;
 
 			border: 1px solid @gray_100;
 			border-radius: 3px;
 			background: transparent;
-			margin: 25px 0;
+			margin: 25px auto;
 			padding: 10px;
 
 			@media @min_sm {
-				margin: 30px 0;
+				margin: 30px auto;
 				padding: 20px;
+			}
+
+			@media @min_lg {
+				max-width: auto;
+				width: 150px;
+
+				position: absolute;
+				top: 20px;
+				right: -10px;
+
+				margin: 0;
+				padding: 10px;
+			}
+
+			@media @min_xl {
+				right: -20px;
 			}
 
 			a {
@@ -107,23 +123,14 @@
 
 			iframe {
 				width: 100%;
+				height: 100px;
 
 				display: block;
+
+				@media @min_lg {
+					height: 230px;
+				}
 			}
-
-
-
-/*
-			@media @min_lg {
-				width: 170px;
-
-				position: absolute;
-				top: 0;
-				right: 0;
-
-				margin: 20px 0 0;
-			}
-*/
 
 			// BSA
 
@@ -180,6 +187,7 @@
 
 			// Carbon
 
+/*
 			#carbonads {
 				position: relative;
 			}
@@ -204,11 +212,20 @@
 					@media @min_sm {
 						padding-top: 10px;
 					}
+
+					@media @min_lg {
+						display: block;
+					}
 				}
 
 				.carbon-img {
 					float: left;
 					margin: 0 15px 0 0;
+
+					@media @min_lg {
+						float: none;
+						margin: 0 0 10px;
+					}
 				}
 			}
 
@@ -221,6 +238,7 @@
 
 				color: @primary;
 			}
+*/
 		}
 	}
 
@@ -511,9 +529,12 @@
 
 	.section_nav_wrapper {
 		.clearfix;
+		.relative;
+
+		z-index: 2;
 
 		background: @white;
-		margin: 0 0 50px;
+		margin: 0 0 25px;
 
 		@media @max_lg {
 			display: none;
@@ -540,6 +561,13 @@
 
 					border-bottom: 1px solid @gray_50;
 				}
+			}
+		}
+
+		&.js-scroll_clone {
+
+			&.js-scroll_locked {
+				visibility: hidden;
 			}
 		}
 	}

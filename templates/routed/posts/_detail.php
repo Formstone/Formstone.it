@@ -23,8 +23,8 @@
 		</div>
 	</header>
 	<div class="page_content">
-		<div class="fs-row">
-			<div class="fs-cell fs-xl-11">
+		<div class="fs-row page_row">
+			<div class="fs-cell fs-lg-9 fs-xl-10">
 				<?php
 					$content = $parsedown->text($post["content"]);
 					$parts = Utils::splitFirstPP($content);

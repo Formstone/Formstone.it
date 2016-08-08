@@ -133,16 +133,18 @@
 				'<!-- DEMO BUTTON -->'
 			);
 			$replace = array(
-				$nav_start,
+				'<!-- NAV START -->' . $nav_start,
 				$use_link,
-				$nav_end,
+				$nav_end . '<!-- NAV END -->',
 				$demo_link
 			);
 
 			$parts = explode('<!-- HEADER END -->', str_ireplace($search, $replace, $data["document"]));
+			$parts_2 = explode('<!-- NAV END -->', $parts[1]);
 
 			$data["header"]  = $parts[0];
-			$data["content"] = $parts[1];
+			$data["nav"]     = $parts_2[0];
+			$data["content"] = $parts_2[1];
 
 			return $data;
 		}
