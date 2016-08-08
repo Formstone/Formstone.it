@@ -78,32 +78,32 @@
 		<meta name="twitter:image" content="<?=$social_image?>">
 
 		<!-- Modernizer -->
-		<script src="<?=WWW_ROOT?>js/modernizr.js"></script>
+		<script src="<?=WWW_ROOT?>js/modernizr.js?v=<?=$package["version"]?>"></script>
 
 		<!-- Fonts -->
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:Fira+Mono">
 
 		<!--[if gt IE 8]><!-->
-			<link rel="stylesheet" href="<?=WWW_ROOT?>formstone/demo/css/demo.css">
-			<link rel="stylesheet" href="<?=WWW_ROOT?>css/site.css">
+			<link rel="stylesheet" href="<?=WWW_ROOT?>formstone/demo/css/demo.css?v=<?=$package["version"]?>">
+			<link rel="stylesheet" href="<?=WWW_ROOT?>css/site.css?v=<?=$package["version"]?>">
 
-			<script src="<?=WWW_ROOT?>js/site.js"></script>
-			<script src="<?=WWW_ROOT?>formstone/demo/js/demo.js"></script>
-			<script src="<?=WWW_ROOT?>js/site-prism.js"></script>
+			<script src="<?=WWW_ROOT?>js/site.js?v=<?=$package["version"]?>"></script>
+			<script src="<?=WWW_ROOT?>formstone/demo/js/demo.js?v=<?=$package["version"]?>"></script>
+			<script src="<?=WWW_ROOT?>js/site-prism.js?v=<?=$package["version"]?>"></script>
 		<!--<![endif]-->
 
 		<!--[if IE 8]>
 			<script>var IE8 = true;</script>
-			<script src="<?=WWW_ROOT?>js/site-ie8.js"></script>
-			<link rel="stylesheet" href="<?=WWW_ROOT?>css/site-ie8.css">
+			<script src="<?=WWW_ROOT?>js/site-ie8.js?v=<?=$package["version"]?>"></script>
+			<link rel="stylesheet" href="<?=WWW_ROOT?>css/site-ie8.css?v=<?=$package["version"]?>">
 		<![endif]-->
 		<!--[if IE 9]>
 			<script>var IE9 = true;</script>
-			<script src="<?=WWW_ROOT?>js/site-ie9.js"></script>
-			<link rel="stylesheet" href="<?=WWW_ROOT?>css/site-ie9.css">
+			<script src="<?=WWW_ROOT?>js/site-ie9.js?v=<?=$package["version"]?>"></script>
+			<link rel="stylesheet" href="<?=WWW_ROOT?>css/site-ie9.css?v=<?=$package["version"]?>">
 		<![endif]-->
 		<!--[if lte IE 9]>
-			<link rel="stylesheet" href="<?=WWW_ROOT?>css/site-ie.css">
+			<link rel="stylesheet" href="<?=WWW_ROOT?>css/site-ie.css?v=<?=$package["version"]?>">
 		<![endif]-->
 	</head>
 	<body class="fs-grid fs-grid-fluid">
