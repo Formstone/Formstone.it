@@ -4,26 +4,22 @@
 	}
 ?>
 <div class="typography">
-
 	<header class="page_header js-scroll_lock" data-scroll-offset="55">
 		<div class="fs-row js-scroll_contents">
 			<div class="fs-cell">
-				<h1 class="page_heading">404</h1>
-				<div class="page_intro">
-					<p>The requested page was not found.</p>
-				</div>
+				<h1 class="page_heading">404 Error</h1>
 			</div>
 		</div>
 	</header>
-
 	<div class="page_content">
-		<div class="fs-row">
-			<div class="fs-cell">
+		<div class="fs-row page_row">
+			<div class="fs-cell fs-lg-9 fs-xl-10">
+				<p>The requested page was not found.</p>
+
 				<?php include "../templates/layouts/partials/ads.php"; ?>
 
-				<? //$parsedown->text($page_content)?>
+				<?php include "../templates/layouts/partials/features.php"; ?>
 			</div>
 		</div>
 	</div>
-
 </div>

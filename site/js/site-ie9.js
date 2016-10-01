@@ -1,5 +1,5 @@
 /*! 
- * Formstone v1.0.2 [2016-08-08] 
+ * Formstone v1.0.2 [2016-09-30] 
  * Formstone website. 
  * Ben Plum 
  */ 

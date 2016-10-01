@@ -7,6 +7,11 @@
 		outline: none;
 	}
 
+	.demo_example {
+		position: relative;
+		z-index: 1;
+	}
+
 
 	.page_wrapper {
 		min-height: 100%;
@@ -93,17 +98,16 @@
 			border: 1px solid @gray_100;
 			border-radius: 3px;
 			background: transparent;
-			margin: 25px auto;
+			margin: 30px auto;
 			padding: 10px;
 
 			@media @min_sm {
-				margin: 30px auto;
 				padding: 20px;
 			}
 
 			@media @min_lg {
 				max-width: auto;
-				width: 150px;
+				width: 152px;
 
 				position: absolute;
 				top: 20px;
@@ -287,7 +291,6 @@
 */
 
 	.blog_landing_friends {
-/*
 		border-bottom: 1px solid @gray_50;
 		clear: both;
 		margin: 0 0 30px;
@@ -295,8 +298,35 @@
 
 		@media @min_md {
 			margin: 0 0 40px;
+			padding: 0 0 10px;
 		}
-*/
+
+		@media @min_lg {
+			border: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		.content_friends {
+			margin-top: 0;
+		}
+	}
+
+	.home_friends {
+		border-top: 1px solid @gray_50;
+		clear: both;
+		margin: 30px 0 10px;
+		overflow: hidden;
+
+		@media @min_lg {
+			border: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		.content_friends {
+			margin-bottom: 0;
+		}
 	}
 
 
@@ -534,7 +564,7 @@
 		z-index: 2;
 
 		background: @white;
-		margin: 0 0 25px;
+		margin: 0 0 10px;
 
 		@media @max_lg {
 			display: none;
@@ -661,9 +691,13 @@
 	a[name]:before {
 		height: 20px;
 
+		position: relative;
+		z-index: -1;
+
 		content: '';
 		display: block;
 		margin-top: -20px;
+		pointer-events: none;
 		visibility: hidden;
 
 		@media @min_md {
@@ -900,11 +934,11 @@
 
 	.post_listing {
 		border-bottom: 1px solid @gray_50;
-		margin: 0 0 30px;
+		margin: 20px 0 30px;
 		padding: 0 0 30px;
 
 		@media @min_md {
-			margin: 0 0 40px;
+			margin: 20px 0 40px;
 			padding: 0 0 40px;
 		}
 
