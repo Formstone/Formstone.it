@@ -1,7 +1,7 @@
 {
   "name": "Formstone",
   "id": "formstone",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Formstone website.",
   "author": "Ben Plum",
   "repository": {
@@ -64,6 +64,7 @@
       "formstone/dist/js/touch.js",
       "formstone/dist/js/transition.js",
       "formstone/dist/js/upload.js",
+      "formstone/dist/js/viewer.js",
       "js/src/site.js",
       "js/src/modules/page.js",
       "js/src/modules/scroll.js"
