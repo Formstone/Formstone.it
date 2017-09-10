@@ -83,6 +83,11 @@ RewriteRule ^js/bookmarklet/grid.js /bookmarklet/grid.js [R=301,L]
 RewriteRule ^css/bookmarklet/grid.css /bookmarklet/grid.css [R=301,L]
 RewriteRule ^images/bookmarklet_icons.png /bookmarklet/icons.png [R=301,L]
 
+#force https
+RewriteCond %{HTTP_HOST} ^formstone\.it [NC]
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://formstone.it/$1 [R,L]
+
 #Back to BigTree
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
@@ -91,5 +96,5 @@ RewriteRule ^(.*)$ index.php?bigtree_htaccess_url=$1 [QSA,L]
 RewriteRule .* - [E=HTTP_IF_MODIFIED_SINCE:%{HTTP:If-Modified-Since}]
 RewriteRule .* - [E=HTTP_BIGTREE_PARTIAL:%{HTTP:BigTree-Partial}]
 
-php_flag short_open_tag On
-php_flag magic_quotes_gpc Off
+# php_flag short_open_tag On
+# php_flag magic_quotes_gpc Off

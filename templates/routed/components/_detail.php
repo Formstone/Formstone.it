@@ -9,11 +9,11 @@
 
 	if ($isDemo && $component["demo_html"]) {
 		$js_header = file_get_contents(SERVER_ROOT . "templates/layouts/partials/js-header.php");
-		$js_footer = file_get_contents(SERVER_ROOT . "templates/layouts/partials/js-footer.php");
+		// $js_footer = file_get_contents(SERVER_ROOT . "templates/layouts/partials/js-footer.php");
 
 		$output = $component["demo_html"];
 		$output = str_ireplace("<!-- JSHEADER -->", $js_header, $output);
-		$output = str_ireplace("<!-- JSFOOTER -->", $js_footer.'<br clear="both">', $output);
+		// $output = str_ireplace("<!-- JSFOOTER -->", $js_footer.'<br clear="both">', $output);
 
 		$bigtree["layout"] = "empty";
 		echo $output;
