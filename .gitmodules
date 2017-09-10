@@ -1,0 +1,3 @@
+[submodule "formstone"]
+	path = formstone
+	url = git@github.com:Formstone/Formstone.git

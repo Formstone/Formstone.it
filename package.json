@@ -1,0 +1,67 @@
+{
+  "name": "formstone-it",
+  "id": "formstone-it",
+  "codename": "formstone-it",
+  "realname": "Formstone.it",
+  "version": "1.0.0",
+  "description": "Library of modular front end components.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Formstone/Formstone.it/"
+  },
+  "scripts": {
+    "postinstall": "gulp"
+  },
+  "homepage": "http://formstone.it/",
+  "homepage_short": "formstone.it",
+  "demo": "http://formstone.it/",
+  "license": "GPL-3.0",
+  "main": "dist/js/core.js",
+  "author": {
+    "name": "Ben Plum",
+    "email": "mr@benplum.com",
+    "url": "http://www.benplum.com"
+  },
+  "dependencies": {
+    "jquery": "^3.2.1"
+  },
+  "devDependencies": {
+    "formstone": "^1.3.3",
+    "fs-sync": "^1.0.4",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-banner": "^0.1.3",
+    "gulp-beautify": "^2.0.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-clean-css": "^3.7.0",
+    "gulp-clip-empty-files": "^0.1.2",
+    "gulp-cssbeautify": "^0.1.3",
+    "gulp-header": "^1.8.9",
+    "gulp-html-beautify": "^1.0.1",
+    "gulp-include": "^2.3.1",
+    "gulp-jshint": "^2.0.4",
+    "gulp-less": "^3.3.2",
+    "gulp-modernizr": "^1.0.0-alpha",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace-include": "^1.3.1",
+    "gulp-sequence": "^0.4.6",
+    "gulp-uglify": "^3.0.0",
+    "gulp-zetzer": "^1.0.4",
+    "jshint": "^2.9.5",
+    "less-plugin-npm-import": "^2.1.0",
+    "moment": "^2.18.1",
+    "normalize-css": "^2.3.1",
+    "prismjs": "^1.6.0"
+  },
+  "src": {
+    "vars": {
+      "mq_min_ht_sm": "500",
+      "mq_min_ht": "800",
+      "mq_min_xs": "320",
+      "mq_min_sm": "500",
+      "mq_min_md": "740",
+      "mq_min_lg": "980",
+      "mq_min_xl": "1220"
+    }
+  }
+}

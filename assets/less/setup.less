@@ -1,0 +1,331 @@
+/* ==========================================================================
+	Variables
+============================================================================= */
+
+	@root_font_size: 16;
+
+	@base_transition_duration: 0.25s;
+	@base_transition_timing: linear;
+	@base_transition_delay: 0s;
+
+	// Width Media Queries
+
+	@min_sm:	  ~"only screen and (min-width:" (@mq_min_sm * 1px) + ~")";
+	@min_md:	  ~"only screen and (min-width:" (@mq_min_md * 1px) + ~")";
+	@min_lg:	  ~"only screen and (min-width:" (@mq_min_lg * 1px) + ~")";
+	@min_xl:	  ~"only screen and (min-width:" (@mq_min_xl * 1px) + ~")";
+
+	@max_sm:	  ~"only screen and (max-width:" (@mq_min_sm - 1px) + ~")";
+	@max_md:	  ~"only screen and (max-width:" (@mq_min_md - 1px) + ~")";
+	@max_lg:	  ~"only screen and (max-width:" (@mq_min_lg - 1px) + ~")";
+	@max_xl:	  ~"only screen and (max-width:" (@mq_min_xl - 1px) + ~")";
+
+	@and_max_sm:  ~"and (max-width:" (@mq_min_sm - 1px) + ~")";
+	@and_max_md:  ~"and (max-width:" (@mq_min_md - 1px) + ~")";
+	@and_max_lg:  ~"and (max-width:" (@mq_min_lg - 1px) + ~")";
+	@and_max_xl:  ~"and (max-width:" (@mq_min_xl - 1px) + ~")";
+
+	// Height Media Queries
+
+	@min_ht:		~"(max-height:" (@mq_min_ht * 1px) + ~")";
+	@max_ht:		~"(max-height:" (@mq_min_ht - 1px) + ~")";
+
+	@and_min_ht:	~"and (min-height:" (@mq_min_ht * 1px) + ~")";
+	@and_max_ht:	~"and (max-height:" (@mq_min_ht - 1px) + ~")";
+
+	// Other
+
+	@margin_sm: 20px;
+	@margin_md: 40px;
+	@margin_lg: 60px;
+	@margin_xl: 80px;
+
+	@sprite_width:  800px;
+	@sprite_height: 360px;
+
+
+	@header_height_sm: 50px;
+	@header_height_lg: 75px;
+
+	@sidebar_width_lg: 240px;
+
+
+/* ==========================================================================
+	Colors
+============================================================================= */
+
+	@true_white: #fff;
+	@true_black: #000;
+
+	@white: #fff;
+	@black: #212121;
+
+
+/*
+	@blue:   #03A9F4;
+
+	@yellow_dark:	#FFA000;
+	@yellow:		#FFC107;
+	@yellow_light:	#FFECB3;
+
+	@red:			#FF5252;
+*/
+
+/*
+	@gray_light: #EEEEEE;
+	@gray:       #999999;
+	@gray_dark:  #555555;
+*/
+	@gray_text:  #333333;
+
+	// #727272;
+	// #B6B6B6
+
+
+	@primary_dark:		#455A64;
+	@primary:			#607D8B;
+	@primary_light:		#CFD8DC;
+
+	@accent:			#00BCD4;
+	@accent_light:		#e1f5fe;
+
+
+	@gray_50:			#eceff1;
+	@gray_100:			#cfd8dc;
+	@gray_200:			#b0bec5;
+	@gray_300:			#90a4ae;
+	@gray_400:			#78909c;
+	@gray_500:			#607d8b;
+
+
+/* ==========================================================================
+	Mixins
+============================================================================= */
+
+
+	.sans(@weight:400) {
+		font-family: 'Open Sans', sans-serif;
+		font-weight: @weight;
+	}
+
+	.serif(@weight:400) {
+		font-family: 'Vollkorn', serif;
+		font-weight: @weight;
+	}
+
+	.mono(@weight:400) {
+		font-family: 'Fira Mono', monospace;
+		font-weight: @weight;
+	}
+
+/*
+	.icon() {
+		font-family: 'Material Icons';
+		font-weight: normal;
+		font-style: normal;
+
+		-webkit-font-smoothing: antialiased;
+		text-rendering: optimizeLegibility;
+		-moz-osx-font-smoothing: grayscale;
+		font-feature-settings: 'liga';
+	}
+*/
+
+
+
+
+	.transition(@duration:0.25s, @timing:linear, @delay:0) {
+		transition:
+			background-color @duration @timing,
+			border-color @duration @timing,
+			box-shadow @duration @timing,
+			color @duration @timing,
+			opacity @duration @timing;
+	}
+
+	.transition_link(@duration:0.25s, @timing:linear, @delay:0) {
+		&,
+		&:link,
+		&:visited,
+		&:hover,
+		&:active,
+		&:focus {
+			.transition(@duration, @timing, @delay)
+		}
+	}
+
+	.font_size(@px_size) {
+		@px: @px_size;
+		@rem: (@px_size / @root_font_size);
+		font-size: ~"@{px}px";
+		font-size: ~"@{rem}rem";
+	}
+
+	.size(@width:0, @height:@width) {
+		width: ~"@{width}px";
+		height: ~"@{height}px";
+	}
+
+	.line_height(@lineHeight, @fontSize:@lineHeight) {
+		line-height: (@lineHeight / @fontSize);
+	}
+
+	.rgba_background(@base, @alpha) {
+		background-color: rgba(red(@base), green(@base), blue(@base), @alpha);
+	}
+
+	.rgba_text(@base, @alpha) {
+		color: rgba(red(@base), green(@base), blue(@base), @alpha);
+	}
+
+	// 1. Autoprefixer does not prefix correctly
+	// 2. IE 10/11 uses a non-standard
+
+	.columns(@count, @gap) {
+		column-count: @count;
+		column-gap: @gap;
+
+		& > * {
+			-webkit-column-break-inside: avoid; // 1
+			column-break-inside: avoid;
+			break-inside: avoid; // 2
+		}
+	}
+
+	.icon_sprite(@left:0, @top:0) {
+		background: url(../images/icons.png) no-repeat @left @top;
+
+		.svg & {
+			background-image: url(../images/icons.svg);
+		}
+	}
+
+	.scale_sprite(@percent:1, @imageOffsetX:0, @imageOffsetY:0) {
+		background-size: floor(@sprite_width * @percent) floor(@sprite_height * @percent);
+		background-position: floor(@imageOffsetX * @percent) floor(@imageOffsetY * @percent);
+	}
+
+	.icon_indent() {
+		overflow: hidden;
+		text-indent: 200%;
+		white-space: nowrap;
+	}
+
+	.cover() {
+		height: 100%;
+		width: 100%;
+
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+	}
+
+	/**
+	 * Cover Image:
+	 *
+	 * Use on wrapping element of img (<figure>, <picture>)
+	 * Will work like background-size: cover; but with static images
+	 * Won't scale it down though, so good to use with picturefill
+	 */
+
+	.cover_image() {
+		position: relative;
+
+		z-index: 1;
+
+		img {
+			width: auto;
+			height: auto;
+
+			position: absolute;
+			top: 50%;
+			left: 50%;
+
+			min-width: 100% !important;
+			min-height: 100% !important;
+			transform: translate(-50%, -50%);
+			z-index: 0;
+		}
+	}
+
+	.center() {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+
+		transform: translate(-50%, -50%);
+	}
+
+	.center_vertical() {
+		position: absolute;
+		top: 50%;
+
+		transform: translateY(-50%);
+	}
+
+	.absolute_center_parent() {
+		position: relative;
+	}
+
+	.absolute_center() {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+
+		margin: auto;
+	}
+
+	.text_indent(@height: 0) {
+		display: block;
+		line-height: @height;
+		overflow: hidden;
+		text-indent: 100%;
+	}
+
+	.ellipsis() {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+
+	// 1. Filter for <= IE 9, does not work on pseudo elements
+
+	.gradient_vertical(@startColor: black, @endColor: white) {
+		background-color: @startColor;
+		background: linear-gradient(to bottom, @startColor, @endColor);
+
+		@ieStartColor: argb(@startColor);
+		@ieEndColor:   argb(@endColor);
+
+		filter: ~"progid:DXImageTransform.Microsoft.gradient(startColorstr='@{ieStartColor}', endColorstr='@{ieEndColor}', GradientType=0)"; // 1
+	}
+
+	// 1. Filter for <= IE 9, does not work on pseudo elements
+
+	.gradient_horizontal(@startColor: black, @endColor: white) {
+		background-color: @startColor;
+		background: linear-gradient(to right, @startColor, @endColor);
+
+		@ieStartColor: argb(@startColor);
+		@ieEndColor:   argb(@endColor);
+
+		filter: ~"progid:DXImageTransform.Microsoft.gradient(startColorstr='@{ieStartColor}', endColorstr='@{ieEndColor}', GradientType=1)"; // 1
+	}
+
+	.rgba_raw(@base, @alpha) {
+		@return: rgba(red(@base), green(@base), blue(@base), @alpha);
+	}
+
+	.font_smoothing {
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+
+	.killFlicker {
+		-webkit-font-smoothing: auto;
+		transform: translateZ(0);
+	}

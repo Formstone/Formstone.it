@@ -1,0 +1,152 @@
+/* ==================================================================
+	Base Icons
+================================================================== */
+
+/*
+	.icon_only {
+
+		.icon_text {
+			.hide;
+		}
+	}
+
+	.icon_only_before {
+
+		&:before {
+			.icon_sprite();
+
+			content: "";
+			display: inline-block;
+		}
+	}
+
+	.icon_only_after {
+
+		&:after {
+			.icon_sprite();
+
+			content: "";
+			display: inline-block;
+		}
+	}
+
+
+	.icon_left {
+
+		&:before {
+			margin-right: 10px;
+		}
+	}
+
+	.icon_right {
+
+		&:after {
+			margin-left: 10px;
+		}
+	}
+
+	.icon_center {
+		position: relative;
+
+		display: block;
+		line-height: 1;
+		overflow: hidden;
+		text-indent: 100%;
+
+		&:after {
+			.icon_sprite();
+
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+
+			display: block;
+			content: '';
+			margin: auto;
+		}
+	}
+*/
+
+
+/* ==================================================================
+   Icons
+================================================================== */
+
+	@font-face {
+		font-family: 'icomoon';
+		src: url('../fonts/icomoon.eot?qcahb9');
+		src: url('../fonts/icomoon.eot?qcahb9#iefix') format('embedded-opentype'),
+			 url('../fonts/icomoon.ttf?qcahb9') format('truetype'),
+			 url('../fonts/icomoon.woff?qcahb9') format('woff'),
+			 url('../fonts/icomoon.svg?qcahb9#icomoon') format('svg');
+		font-weight: normal;
+		font-style: normal;
+	}
+
+	[class^="icon-"], [class*=" icon-"] {
+
+		&:before {
+			font-family: 'icomoon' !important;
+			speak: none;
+			font-style: normal;
+			font-weight: normal;
+			font-variant: normal;
+			text-transform: none;
+		}
+
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+
+	.icon-logo:before {
+		content: "\e902";
+	}
+
+	.icon-menu:before {
+		content: "\e5d2";
+	}
+
+	.icon-twitter:before {
+		content: "\e900";
+	}
+	.icon-github:before {
+		content: "\e901";
+	}
+	.icon-devices:before {
+		content: "\e1b1";
+	}
+	.icon-extension:before {
+		content: "\e87b";
+	}
+	.icon-favorite:before {
+		content: "\e87d";
+	}
+	.icon-settings:before {
+		content: "\e8b8";
+	}
+	.icon-palette:before {
+	    content: "\e3b7";
+	}
+
+
+	.icon_heading {
+
+		&:before {
+			color: @accent;
+			font-size: 0.8em;
+			margin: 0 10px 0 0;
+		}
+	}
+
+	.icon_link {
+
+		&:before {
+			color: inhert;
+			font-size: 1em;
+			margin: 0 5px 0 0;
+			vertical-align: middle;
+		}
+	}
+
