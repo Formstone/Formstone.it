@@ -84,7 +84,7 @@
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:Fira+Mono">
 
 		<!--[if gt IE 8]><!-->
-			<link rel="stylesheet" href="<?=WWW_ROOT?>formstone/demo/css/demo.css?v=<?=$package["version"]?>">
+			<link rel="stylesheet" href="<?=WWW_ROOT?>formstone/demo/css/site.css?v=<?=$package["version"]?>">
 			<link rel="stylesheet" href="<?=WWW_ROOT?>css/site.css?v=<?=$package["version"]?>">
 
 			<script src="<?=WWW_ROOT?>js/site.js?v=<?=$package["version"]?>"></script>

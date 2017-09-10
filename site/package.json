@@ -9,33 +9,31 @@
     "url": "url"
   },
   "devDependencies": {
-    "autoprefixer": "^6.1.0",
-    "grunt": "^0.4.5",
-    "grunt-bless": "^0.2.0",
-    "grunt-browser-sync": "^2.1.3",
-    "grunt-contrib-clean": "^0.6.0",
-    "grunt-contrib-concat": "^0.5.1",
-    "grunt-contrib-imagemin": "^1.0.0",
-    "grunt-contrib-jshint": "^0.11.3",
-    "grunt-contrib-less": "^1.0.1",
-    "grunt-contrib-uglify": "^0.10.0",
-    "grunt-contrib-watch": "^0.6.1",
-    "grunt-html-validation": "^0.1.18",
-    "grunt-include-replace": "^3.2.0",
-    "grunt-modernizr": "^1.0.1",
-    "grunt-newer": "^1.1.1",
-    "grunt-postcss": "^0.7.1",
-    "grunt-prettify": "^0.4.0",
-    "grunt-stripmq": "0.0.6",
-    "grunt-svgmin": "^2.0.1",
-    "less-plugin-clean-css": "^1.5.1",
-    "load-grunt-tasks": "^3.3.0",
-    "cssnano": "^3.5.2"
-  },
-  "css": {
-    "css/site.css": "css/src/site.less",
-    "css/site-ie8.css": "css/src/ie/ie8.less",
-    "css/site-ie9.css": "css/src/ie/ie9.less"
+    "fs-sync": "^1.0.4",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-banner": "^0.1.3",
+    "gulp-beautify": "^2.0.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-clean-css": "^3.7.0",
+    "gulp-clip-empty-files": "^0.1.2",
+    "gulp-cssbeautify": "^0.1.3",
+    "gulp-header": "^1.8.9",
+    "gulp-html-beautify": "^1.0.1",
+    "gulp-include": "^2.3.1",
+    "gulp-jshint": "^2.0.4",
+    "gulp-less": "^3.3.2",
+    "gulp-modernizr": "^1.0.0-alpha",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace-include": "^1.3.1",
+    "gulp-sequence": "^0.4.6",
+    "gulp-uglify": "^3.0.0",
+    "gulp-zetzer": "^1.0.4",
+    "jshint": "^2.9.5",
+    "less-plugin-npm-import": "^2.1.0",
+    "moment": "^2.18.1",
+    "normalize-css": "^2.3.1",
+    "prismjs": "^1.6.0"
   },
   "js": {
     "js/site.js": [
@@ -72,19 +70,7 @@
     "js/site-prism.js": [
       "bower/prism/prism.js"
     ],
-    "js/site-ie8.js": [
-      "bower/html5shiv/dist/html5shiv.min.js",
-      "bower/html5shiv/dist/html5shiv-printshiv.min.js",
-      "js/src/ie/matchMedia.ie8.js"
-    ],
-    "js/site-ie9.js": [
-      "js/src/ie/matchMedia.ie9.js"
-    ]
   },
-  "js_ignores": [
-    "js/src/ie/*/",
-    "js/src/lib/*/"
-  ],
   "vars": {
     "mq_min_ht": "800",
     "mq_min_xs": "320",
