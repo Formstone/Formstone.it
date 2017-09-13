@@ -1,21 +1,23 @@
-/*-------------------------------------------
-	Page
--------------------------------------------*/
+/* ==========================================================================
+  ScrollSpy
+============================================================================= */
 
-	/* global picturefill */
+	(function($, Formstone) {
 
-	Site.modules.Scroll = (function($, Site) {
-
-		var $Instances,
+		var $window,
+      $Instances,
 			$SpyItems,
-			$SpyBlocks;
+			$SpyBlocks,
+      scrollTop;
 
 		function init() {
+      $window = $(window);
+
 			$Instances = $(".js-scroll_lock").each(createInstance);
 
-			$SpyItems  = $(".js-scroll_spy").find("a").on("click", Site.modules.Page.onScrollTo);
+			$SpyItems  = $(".js-scroll_spy").find("a");
 			$SpyBlocks = $SpyItems.map(function(){
-				var id    = $(this).attr("href"),
+				var id = $(this).attr("href"),
 					$item = $(id);
 
 				if (!$item.length) {
@@ -27,13 +29,15 @@
 				}
 			});
 
-			Site.onScroll.push(scroll);
-			Site.onResize.push(resize);
+			$window.on("scroll", scroll);
+			$window.on("resize", resize);
 
 			scroll();
 		}
 
 		function scroll() {
+      scrollTop = $window.scrollTop();
+
 			$Instances.each(checkInstance);
 
 			// Spy
@@ -43,7 +47,7 @@
 			$SpyBlocks.each(function() {
 				var $block = $(this);
 
-				if (Site.scrollTop >= $block.offset().top - 10) {
+				if (scrollTop >= $block.offset().top - 10) {
 					$current = $block;
 				}
 			});
@@ -51,7 +55,7 @@
 			$SpyItems.removeClass("js-active");
 
 			if ($current.length) {
-				$SpyItems.filter("[href=#" + $current.attr("name") + "]").addClass("js-active");
+				$SpyItems.filter("[href='#" + $current.attr("name") + "']").addClass("js-active");
 			}
 		}
 
@@ -96,7 +100,7 @@
 		function checkInstance() {
 			var data = $(this).data("scroll");
 
-			if ((Site.scrollTop - data.top) > data.offset) {
+			if ((scrollTop - data.top) > data.offset) {
 				data.locked = true;
 				data.$locks.addClass("js-scroll_locked");
 			} else {
@@ -105,11 +109,8 @@
 			}
 		}
 
-		/* Hook Into Main init Routine */
+		// Init
 
-		Site.onInit.push(init);
+		Formstone.Ready(init);
 
-		return {
-
-		};
-	})(jQuery, Site);
+	})(jQuery, Formstone);

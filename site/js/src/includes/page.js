@@ -1,24 +1,27 @@
-/*-------------------------------------------
-	Page
--------------------------------------------*/
+/* ==========================================================================
+  Page
+============================================================================= */
 
 	/* global picturefill */
 
-	Site.modules.Page = (function($, Site) {
+	(function($, Formstone) {
+
+    var $body;
 
 		function init() {
-
 			picturefill();
+
+      $body = $("body");
 
 			$.analytics({
 				scrollDepth: true
 			});
 
-			Site.$body.find(".js-mobile_navigation").navigation({
+			$body.find(".js-mobile_navigation").navigation({
 				maxWidth: "979px"
 			});
 
-			Site.$body.find(".js-navigation")
+			$body.find(".js-navigation")
 				.navigation({
 					maxWidth: "979px"
 				})
@@ -28,34 +31,17 @@
 					trackEvent( $(this).data("analytics-close") );
 				});
 
-			Site.$body.find("table").wrap('<div class="table_wrapper"></div>');
+			$body.find("table").wrap('<div class="table_wrapper"></div>');
 
-			Site.$body.find(".js-scroll_to")
+			$body.find(".js-scroll_to, .js-scroll_to_parent a")
 				.not(".js-bound")
 				.on("click", onScrollTo)
 				.addClass("js-bound");
-
-			Site.onScroll.push(scroll);
-			Site.onResize.push(resize);
-			Site.onRespond.push(respond);
-
-			Site.scroll();
-		}
-
-		function scroll() {
-
-		}
-
-		function resize() {
-			scroll();
-		}
-
-		function respond() {
-			scroll();
 		}
 
 		function onScrollTo(e) {
-			Site.killEvent(e);
+			e.preventDefault();
+			e.stopPropagation();
 
 			var $target = $(e.delegateTarget),
 				id = $target.attr("href");
@@ -82,8 +68,6 @@
 		}
 
 		function trackEvent(data) {
-			console.log($.type(data));
-
 			if ($.type(data) === "string") {
 				data = data.split(",");
 
@@ -91,11 +75,8 @@
 			}
 		}
 
-		/* Hook Into Main init Routine */
+		// Init
 
-		Site.onInit.push(init);
+		Formstone.Ready(init);
 
-		return {
-			onScrollTo: onScrollTo
-		};
-	})(jQuery, Site);
+	})(jQuery, Formstone);

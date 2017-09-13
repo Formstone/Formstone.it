@@ -85,7 +85,7 @@
 
 			$nav_start  = '<div class="section_nav_wrapper js-scroll_lock" data-scroll-offset="-100">';
 			$nav_start .= '<div class="fs-row js-scroll_contents">';
-			$nav_start .= '<nav class="fs-cell section_nav js-scroll_spy">';
+			$nav_start .= '<nav class="fs-cell section_nav js-scroll_spy js-scroll_to_parent">';
 
 			$nav_end    = '</nav>';
 			$nav_end   .= '</div>';
