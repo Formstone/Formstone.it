@@ -1,5 +1,7 @@
 <?php
-	include SERVER_ROOT . "custom/inc/lib/formstone.php";
+
+	include_once SERVER_ROOT . "custom/inc/lib/utils.php";
+	include_once SERVER_ROOT . "custom/inc/lib/formstone.php";
 
 	$formstone = new Formstone($bigtree["config"]["debug"]);
 

@@ -14,7 +14,7 @@
 			</div>
 		</div>
 	</header>
-	<div class="page_content">
+	<div class="page_content js-friends_container">
 		<div class="fs-row page_row">
 			<div class="fs-cell fs-lg-9 fs-xl-10">
 				<?php

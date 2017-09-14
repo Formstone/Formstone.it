@@ -32,7 +32,7 @@
 			</div>
 		</div>
 	</header>
-	<div class="page_content page_content_component">
+	<div class="page_content page_content_component js-friends_container">
 		<div class="fs-row">
 			<div class="fs-cell fs-lg-9 fs-xl-10">
 				<?=$component["nav"]?>

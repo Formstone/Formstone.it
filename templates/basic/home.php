@@ -13,7 +13,7 @@
 			</div>
 		</div>
 	</header>
-	<div class="page_content">
+	<div class="page_content js-friends_container">
 		<div class="fs-row">
 			<div class="fs-cell">
 				<div class="fs-row page_row">

@@ -94,7 +94,11 @@
 
 			$use_link  = '<li><a href="#use">Use</a></li>';
 			$demo_link = '';
-			$ad_block = file_get_contents(SERVER_ROOT . "templates/layouts/partials/ads.php");
+
+      ob_start();
+			include SERVER_ROOT . "templates/layouts/partials/ads.php";
+      $ad_block = ob_get_clean();
+
 
 			$data["demo_html"] = str_ireplace(array("../"), array(WWW_ROOT . "demo/"), file_get_contents(SERVER_ROOT . "site/formstone/demo/components/" . $route . ".html"));
 
