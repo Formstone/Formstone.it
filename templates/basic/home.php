@@ -50,7 +50,7 @@
 					</div>
 					<div class="fs-cell fs-md-half fs-lg-full fs-xl-half home_feature">
 						<h2 class="icon_heading icon-settings">Automated</h2>
-						<p>Compiled with Grunt to ensure code quality and deployable with Bower to maintain simple implementation.</p>
+						<p>Compiled with Gulp to ensure code quality and deployable with Bower to maintain simple implementation.</p>
 					</div>
 				</div>
 			</div>
